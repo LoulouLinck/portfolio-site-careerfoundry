@@ -27,7 +27,7 @@ body {
 
 /* Specifies font-seize and Weight: default values not inherited */
 h1 {
-  font-size: 31px;
+  font-size: 30px;
   font-weight: var(--font-weight-headings);
 }
 
