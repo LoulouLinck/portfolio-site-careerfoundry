@@ -1,0 +1,493 @@
+/* Once you’re done with the initial version of your website at the end of this course, we recommend doing the following:
+
+Run your transpiled CSS through the autoprefixer (or any other postprocessor you decide to use).
+Create a new CSS file called “style.production.css” and paste the output from the autoprefixer into this file.
+Update your links in the header of the CSS file to the new “style.production.css” file.
+Make sure you keep a copy of your original “styles.css” file. If you want to make any changes later, it’s best to make it in this file and repeat the process again. */
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* Default styling for all tags in <body> */
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  text-align: center;
+
+  /* 16px = min. for body text's accessibility */
+  font-size: 16px;  line-height: 1.6;
+}
+
+/* Specifies font-seize and Weight: default values not inherited */
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Interactive Elements and Hover States */
+
+/* default colour of all links */
+a {
+  color: #ff6e00;
+  font-size: 16px;
+}
+
+/* Pseudo-classes for <a> */
+
+/* changes colour if ever visited before */
+a:visited {
+  color: #b24d00;
+}
+
+/* default underlining of hypertext disappears when hovering over links w/ mouse or when targeted w/ a keyboard (ACCESSIBILITY)
+ By default 'cursor: pointer; (cusor will appear has hand when hovering over) */
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+/* changes colour of selected link */
+a:active {
+  color: #ff8b32;
+}
+
+/* feedback to user: knows from nav bar that the non-underlined item =currently visited page */
+.navigation-list__item--active {
+  text-decoration: none;
+}
+
+/* btn styling */
+button {
+  /* styles btn background colour */
+  background-color: #ff6e00;
+
+  /* styles font colour */
+  color: #fff;
+
+  /* takes the font from the parent container */
+
+  /* font-family: inherit; */
+  font-size: 16px;
+  /* adds spacing to the btn */
+  padding: 10px;
+
+  /* overwrites browser defaults and resets the border */
+  border: none;
+
+  /* rounds up the angles of btn border */
+  border-radius: 10px;
+
+  /* gives btn a bottom border w/ a 2px width, a type of solid, and color */
+  border-bottom: 3px solid #b24d00;
+  display: inline-block;
+
+  /* shorthand: transition btw default and hover/focus states */
+  -webkit-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+
+  /* longhand */
+  /* transition-duration: 0.2s;
+  transition-property: opacity; */
+}
+
+.button {
+  /* styles btn background colour */
+  background-color: #ff6e00;
+
+  /* styles font colour */
+  color: #fff;
+
+  /* takes the font from the parent container */
+
+  /* font-family: inherit; */
+  font-size: 16px;
+
+  /* adds spacing to the btn */
+  padding: 10px;
+
+  /* overwrites browser defaults and resets the border */
+  border: none;
+
+  /* rounds up the angles of btn border */
+  border-radius: 10px;
+
+  /* gives btn a bottom border w/ a 2px width, a type of solid, and color */
+  border-bottom: 3px solid #b24d00;
+  display: inline-block;
+
+  /* shorthand: transition btw default and hover/focus states */
+  -webkit-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+
+  /* longhand */
+
+  /* transition-duration: 0.2s;
+  transition-property: opacity; */
+}
+
+/* mouse appear as a hand when hovering over btn
+   reduces opacity of the btn to 80% */
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.button__secondary {
+  background-color: #e0b354;
+  color: #2b2b2b;
+}
+
+/* places the img on the left of the page with text on its right side */
+.profile__portrait {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+/* prevents footer to be affeted by floated image, remains below instead of next to it */
+.page-footer {
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* header (logo+nab bar) covers full width of page */
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+/* no growing, ability to shrink, base width 200px */
+.page-header__item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 200px;
+  flex: 0 1 200px;
+}
+
+.logo {
+  width: 200px;
+  height: 70px;
+}
+
+/* nav bar: rest of width spacce, right aligned */
+.page-header__item:last-child {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: right;
+}
+
+/* bullet points of unordered list styling */
+.navigation-list {
+  list-style-type: none;
+}
+
+/* align list item in a row: in inline-block fashion rather than li */
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+/* Grid fallback */
+.project-grid__item {
+  display: inline-block;
+  width: 33%;
+}
+
+/* feature detection for browsers reccognising grid */
+@supports (display: grid) {
+  /* set grid container w/ general display values to be applied to all children
+(doesn't work when same set to children) */
+  .project-grid {
+    display: -ms-grid;
+    display: grid;
+
+    /* divides into 3 columns equal in size all available space using fraction unit.
+  sets by default a grid-template-rows: auto */
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /* blank cell-spacing gaps */
+    grid-gap: 20px;
+    margin: 0%;
+  }
+
+  .project-grid__item {
+    background-color: beige;
+    padding: 15px;
+
+    /* why this 3 lines of code now? */
+    width: auto;
+    min-height: auto;
+    margin: 0;
+  }
+
+  .project-grid__item:last-child {
+    -ms-grid-column: 3;
+    grid-column-start: 3;
+    -ms-grid-column-span: 0;
+    grid-column-end: 3;
+    -ms-grid-row: 1;
+    grid-row-start: 1;
+    -ms-grid-row-span: 2;
+    grid-row-end: 3;
+
+    /* or
+  grid-column: 3 / 3;
+  grid-row: 1 / 3; */
+  }
+}
+
+/* responsive classes for different devices */
+@media all and (max-width: 501px) {
+  .project-grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 501px) and (max-width: 750px) {
+  .project-grid {
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .project-grid {
+    grid-gap: 10px;
+  }
+
+  .project-grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+.skills-table {
+  display: inline-block;
+  clear: both;
+}
+
+/* sun animation */
+@-webkit-keyframes sun-color-change {
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
+@keyframes sun-color-change {
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
+/* apply animation to SVG element: longhand */
+.sun {
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-name: color-change;
+  animation-name: color-change;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+
+  /* shorthand */
+
+  /* animation: 4s color-change infinite alternate linear; */
+}
+
+/* cloud animation */
+@-webkit-keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+    transform: translate(0, 50px);
+  }
+
+  to {
+    -webkit-transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+    transform: translate(0, 50px);
+  }
+
+  to {
+    -webkit-transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
+  }
+}
+
+/* apply animation to cloud SVG element
+slow movement applied: 30s */
+.cloud-front {
+  -webkit-animation: 30s cloud-move infinite alternate linear;
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@-webkit-keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    -webkit-transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
+  }
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    -webkit-transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* Animation nav bar w/circles behind */
+div.container a {
+  color: #ff6e00;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 10px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
+
+div.circleBehind a:before {
+  position: absolute;
+  top: 19px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border: 4px solid lightsalmon;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  transform: translateX(-50%) translateY(-50%) scale(0.8);
+  border-radius: 50%;
+  background: transparent;
+  content: "";
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.circleBehind a:after {
+  position: absolute;
+  top: 19px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border: 4px solid lightsalmon;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  transform: translateX(-50%) translateY(-50%) scale(0.8);
+  border-radius: 50%;
+  background: transparent;
+  content: "";
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+div.circleBehind a:after {
+  border-width: 2px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+div.circleBehind a:hover:before {
+  opacity: 1;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(1);
+  transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+div.circleBehind a:hover:after {
+  opacity: 1;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1.3);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(1.3);
+  transform: translateX(-50%) translateY(-50%) scale(1.3);
+}
