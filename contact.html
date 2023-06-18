@@ -7,107 +7,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Laure Lincker</title>
   <!-- link to favicon -->
-  <link rel="shortcut icon" href="./img/favicon L.Lincker.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="./img/favicon-L.Lincker.ico" type="image/x-icon">
   <!-- link to CSS style reset/normalisation -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <!-- links from google.font to desired fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@100;400;900&family=Sacramento&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@100;400;900&family=Sacramento&family=Ubuntu:wght@400;700&display=swap"
+    rel="stylesheet">
   <!-- link to our CSS style sheet -->
   <link rel="stylesheet" type="text/css" href="CSS/style.production.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
- <body>
-  <!-- Home nav bar --> 
-   <header class="page-header">
+<body>
+  <!-- Home nav bar -->
+  <header class="page-header">
     <img class="page-header__item logo" src="img/koi_logo.svg" alt="Logo Laure Lincker">
-     <nav class="main-navigation page-header__item">
-      <ul role="menubar" class="navigation-list">
-        <div class="container orange circleBehind">
-        <li role="presentation">
-          <a href="index.html" role="menuitem" class="navigation-list__item" target="_blank">Home</a>
-        </li>
-        <li role="presentation">
-          <a href="about.html" role="menuitem" class="navigation-list__item" target="_blank">About me</a>
-        </li>
-        <li>
-          <a href="work.html" role="menuitem" class="navigation-list__item" target="_blank">Work</a>
-         </li>
-        <li role="presentation">
-          <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active" target="_blank">Contact</a>
-        </li>
+    <nav class="main-navigation page-header__item">
+      <div class="container orange circleBehind">
+        <ul role="menubar" class="navigation-list">
+          <li role="presentation">
+            <a href="index.html" role="menuitem" class="navigation-list__item" target="_blank">Home</a>
+          </li>
+          <li role="presentation">
+            <a href="about.html" role="menuitem" class="navigation-list__item" target="_blank">About me</a>
+          </li>
+          <li>
+            <a href="work.html" role="menuitem" class="navigation-list__item" target="_blank">Work</a>
+          </li>
+          <li role="presentation">
+            <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active"
+              target="_blank">Contact</a>
+          </li>
+        </ul>
       </div>
-      </ul>
-    </nav>    
-   </header>
- 
-   <!-- Main -->
-   <main>
-     <h1>Contact me</h1>
+    </nav>
+  </header>
 
-     Laure Lincker <br>
-     Wildenbruchplatz 7 <br>
-     12045 Berlin <br>
-     Germany <br>
-      <br>
-     Telephone: <a href="tel:+49 1525 811698" target="_blank" >+49 1525 811698</a><br>
-     Skype: <a href="skype:live:laure.lincker" target="_blank">live:laure.lincker</a><br>
-     Mail: <a href="mailto:laure.lincker@gmail.com" target="_blank">laure.lincker@gmail.com</a><br>
-     <br>
-      <a href="mailto:laure.lincker@gmail.com" target="_blank">Contact me</a> 
-     <br>
-     
-     <!-- Contact Form -->
-     <br><form action="mailto:laure.lincker@gmail.com" method="post" id="contact-form" enctype="text/plain">
+  <!-- Main -->
+  <main>
+    <h1>Contact me</h1>
+
+    Laure Lincker <br>
+    Wildenbruchplatz 7 <br>
+    12045 Berlin <br>
+    Germany <br>
+    <br>
+    Telephone: <a href="tel:+49_1525_811698" target="_blank">+49 1525 811698</a><br>
+    Skype: <a href="skype:live:laure.lincker" target="_blank">live:laure.lincker</a><br>
+    Mail: <a href="mailto:laure.lincker@gmail.com" target="_blank">laure.lincker@gmail.com</a><br>
+    <br>
+    <a href="mailto:laure.lincker@gmail.com" target="_blank">Contact me</a>
+    <br>
+
+    <!-- Contact Form -->
+    <br>
+    <form action="mailto:laure.lincker@gmail.com" method="post" id="contact-form" enctype="text/plain">
       <!--action="URL where form's data is sent and stored"; 
           method="get or post: HHTP method used to send data" 
           id="since this contact form will be the only one: distinguish it from other types of form with an ID attribute."-->
-       
-       <label for="User name" class="standard-label">Your name</label><br>
-       <!-- label: gives title to form elements. Helps screen readers to click in text boxes, toggle small buttons or tick boxes. Reads aloud label as description. Here text box named "Your Name"-->
-        <!-- for="should be equal to the id attribute of input element to bind them together"-->
-       <!--class="allows to group all labels under same group to be styled w/CSS later"-->
-        <input type="text" id="User name" name="userName"><br>
-       <!-- type="text, email, number, date, time, other semantics"-->
-       <!--name= A MUST "values entered in input field won't be sent w/out defining one" -->
-       
-       <label for="User email" class="standard-label">Your email*</label><br>
-       <input type="email" id="User email" name="userEmail" required><br>
-       <!-- type="email: HTML5 form validation"-->
-      
-       
-       <label for="User msg" class="standard-label">Your message*</label><br>
-       <textarea type="text" id="User msg" name="userMsg" maxlength="240" required></textarea><br><br>
-       <!-- textarea: bigger text box
-            maxlength="set character limit" -->
-       <!-- required attribute: no submition by user without value input. When not included, input is option for submition validation. Place this attribute at the end. -->
-       
-       <button type="submit">Submit</button>
-       <!-- type="submit": submits values using action and method predefined in <form> tag -->
-       <!-- type="reset": delete ALL user inputs. Bad practice. -->
-       <!-- works with JS for custom buttons  --> 
-      
-      
-      
-       </form>
-     
-   </main>
 
-   <!-- Footer-->
-   <footer class="page-footer">
+      <label for="User-name" class="standard-label">Your name</label><br>
+      <!-- label: gives title to form elements. Helps screen readers to click in text boxes, toggle small buttons or tick boxes. Reads aloud label as description. Here text box named "Your Name"-->
+      <!-- for="should be equal to the id attribute of input element to bind them together"-->
+      <!--class="allows to group all labels under same group to be styled w/CSS later"-->
+      <input type="text" id="User-name" name="userName"><br>
+      <!-- type="text, email, number, date, time, other semantics"-->
+      <!--name= A MUST "values entered in input field won't be sent w/out defining one" -->
+
+      <label for="User-email" class="standard-label">Your email*</label><br>
+      <input type="email" id="User-email" name="userEmail" required><br>
+      <!-- type="email: HTML5 form validation"-->
+
+
+      <label for="User-msg" class="standard-label">Your message*</label><br>
+      <textarea type="text" id="User-msg" name="userMsg" maxlength="240" required></textarea><br><br>
+      <!-- textarea: bigger text box
+            maxlength="set character limit" -->
+      <!-- required attribute: no submition by user without value input. When not included, input is option for submition validation. Place this attribute at the end. -->
+
+      <button type="submit">Submit</button>
+      <!-- type="submit": submits values using action and method predefined in <form> tag -->
+      <!-- type="reset": delete ALL user inputs. Bad practice. -->
+      <!-- works with JS for custom buttons  -->
+
+
+
+    </form>
+
+  </main>
+
+  <!-- Footer-->
+  <footer class="page-footer">
     <p>
-     Find me on
+      Find me on
     </p>
-    <div class="social-media" > 
-      <img id="linkedin logo" src="./img/linkedin_icon.svg" alt="linkedin">
-      <img id="github logo" src="./img/github_icon.svg" alt="github">
-      <img id="instagram logo" src="./img/instagram_icon.svg" alt="instagram">
+    <div class="social-media">
+      <img id="linkedin-logo" src="./img/linkedin_icon.svg" alt="linkedin">
+      <img id="github-logo" src="./img/github_icon.svg" alt="github">
+      <img id="instagram-logo" src="./img/instagram_icon.svg" alt="instagram">
     </div>
- </footer> 
-   <script src="JS/tota11y.min.js"></script>
-   <!-- plugin for accessibility check -->
- </body>
+  </footer>
+  <script src="JS/tota11y.min.js"></script>
+  <!-- plugin for accessibility check -->
+</body>
+
 </html>
 <web>

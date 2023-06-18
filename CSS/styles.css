@@ -1,7 +1,7 @@
 :root {
   --primary-color: #ff6e00;
   --lighter-primary-color: #ff8b32;
-  --darker-primary-color: #b24d00; 
+  --darker-primary-color: #b24d00;
   --secondary-color: #e0b354;
   --grid-colour: beige;
   --button-font-color: #fff;
@@ -22,7 +22,8 @@ body {
   text-align: center;
 
   /* 16px = min. for body text's accessibility */
-  font-size: var(--font-size-body-links-buttons);  line-height: 1.6;
+  font-size: var(--font-size-body-links-buttons);
+  line-height: 1.6;
 }
 
 /* Specifies font-seize and Weight: default values not inherited */
@@ -46,7 +47,8 @@ h3 {
 /* default colour of all links */
 a {
   color: var(--primary-color);
-  font-size: var(--font-size-body-links-buttons);}
+  font-size: var(--font-size-body-links-buttons);
+}
 
 /* Pseudo-classes for <a> */
 
@@ -74,7 +76,7 @@ a:active {
 
 /* btn styling */
 button,
-a.button  {
+a.button {
   /* styles btn background colour */
   background-color: var(--primary-color);
 
@@ -188,6 +190,7 @@ button:focus,
 
 /* feature detection for browsers reccognising grid */
 @supports (display: grid) {
+
   /* set grid container w/ general display values to be applied to all children
 (doesn't work when same set to children) */
   .project-grid {
