@@ -87,6 +87,7 @@ a.button {
 
   /* font-family: inherit; */
   font-size: var(--font-size-body-links-buttons);
+
   /* adds spacing to the btn */
   padding: 10px;
 
@@ -104,6 +105,7 @@ a.button {
   transition: opacity 0.2s;
 
   /* longhand */
+
   /* transition-duration: 0.2s;
   transition-property: opacity; */
 }
@@ -190,7 +192,6 @@ button:focus,
 
 /* feature detection for browsers reccognising grid */
 @supports (display: grid) {
-
   /* set grid container w/ general display values to be applied to all children
 (doesn't work when same set to children) */
   .project-grid {
