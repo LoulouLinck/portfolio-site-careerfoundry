@@ -314,6 +314,10 @@ button:focus,
   clear: both;
 }
 
+#about-picture {
+  width: 50%;
+}
+
 /* sun animation */
 @-webkit-keyframes sun-color-change {
   0% {
