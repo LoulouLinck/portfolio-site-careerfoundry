@@ -129,6 +129,7 @@ button {
 
   /* gives btn a bottom border w/ a 2px width, a type of solid, and color */
   border-bottom: 3px solid #b24d00;
+  display: inline-block;
 
   /* shorthand: transition btw default and hover/focus states */
   -webkit-transition: opacity 0.2s;
