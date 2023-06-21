@@ -121,6 +121,9 @@ button {
   /* adds spacing to the btn */
   padding: 10px;
 
+  /* margin adds spacing around the btn and other elements */
+  margin: 10px;
+
   /* overwrites browser defaults and resets the border */
   border: none;
 
