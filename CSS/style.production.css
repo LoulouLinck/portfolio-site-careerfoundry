@@ -16,12 +16,11 @@ Make sure you keep a copy of your original “styles.css” file. If you want to
 body {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
-  font-size: 18px;
   text-align: center;
   padding: 20px;
 
   /* 16px = min. for body text's accessibility */
-  font-size: 16px;  line-height: 1.6;
+  font-size: 18px;  line-height: 1.6;
 }
 
 /* Specifies font-seize and Weight: default values not inherited */
@@ -46,6 +45,7 @@ h3 {
 a {
   color: #ff6e00;
   font-size: 16px;
+  display: inline-block;
 }
 
 /* Pseudo-classes for <a> */
@@ -248,7 +248,9 @@ button:focus,
 .project-grid__item {
   display: inline-block;
   width: 33%;
+  text-align: left;
 }
+
 
 /* feature detection for browsers reccognising grid */
 @supports (display: grid) {
