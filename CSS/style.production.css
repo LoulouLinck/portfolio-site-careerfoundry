@@ -271,7 +271,7 @@ button:focus,
   }
 
   .project-grid__item {
-    background-color: rgb(253, 206, 107);
+    background-color: #ff6f0089;;
     padding: 15px;
 
     /* why this 3 lines of code now? */
