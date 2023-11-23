@@ -329,6 +329,7 @@ button:focus,
 }
 
 .project-links {
+  display: flex;
   position: relative;
   align-items: center;
 }
