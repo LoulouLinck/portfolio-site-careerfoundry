@@ -16,7 +16,7 @@ Make sure you keep a copy of your original “styles.css” file. If you want to
 body {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
-  /* font-size: 18px; */
+  font-size: 18px;
   /* text-align: center; */
   padding: 20px;
 
