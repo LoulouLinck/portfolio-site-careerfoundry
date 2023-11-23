@@ -328,6 +328,11 @@ button:focus,
   }
 }
 
+.project-links {
+  display: inline-block;
+  text-align: center;
+}
+
 .skills-table {
   display: inline-block;
   clear: both;
