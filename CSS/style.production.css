@@ -1,3 +1,29 @@
+/* Once you’re done with the initial version of your website at the end of this course, we recommend doing the following:
+
+Run your transpiled CSS through the autoprefixer (or any other postprocessor you decide to use).
+Create a new CSS file called “style.production.css” and paste the output from the autoprefixer into this file.
+Update your links in the header of the CSS file to the new “style.production.css” file.
+Make sure you keep a copy of your original “styles.css” file. If you want to make any changes later, it’s best to make it in this file and repeat the process again. */
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* Default styling for all tags in <body> */
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  padding: 20px;
+
+  /* 16px = min. for body text's accessibility */
+  font-size: 18px;
+  line-height: 1.6;
+}
+
 /* Specifies font-seize and Weight: default values not inherited */
 h1 {
   font-size: 30px;
