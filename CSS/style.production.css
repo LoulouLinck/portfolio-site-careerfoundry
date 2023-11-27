@@ -1,28 +1,3 @@
-/* Once you’re done with the initial version of your website at the end of this course, we recommend doing the following:
-
-Run your transpiled CSS through the autoprefixer (or any other postprocessor you decide to use).
-Create a new CSS file called “style.production.css” and paste the output from the autoprefixer into this file.
-Update your links in the header of the CSS file to the new “style.production.css” file.
-Make sure you keep a copy of your original “styles.css” file. If you want to make any changes later, it’s best to make it in this file and repeat the process again. */
-
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
-/* Default styling for all tags in <body> */
-body {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 400;
-  text-align: center;
-  padding: 20px;
-
-  /* 16px = min. for body text's accessibility */
-  font-size: 18px;  line-height: 1.6;
-}
-
 /* Specifies font-seize and Weight: default values not inherited */
 h1 {
   font-size: 30px;
@@ -182,6 +157,11 @@ button:focus,
   text-align: center;
 }
 
+#medium-logo {
+  width: 30px;
+  height: 30px;
+}
+
 .profile {
   max-width: 700px;
   margin: 0 auto;
@@ -244,6 +224,19 @@ button:focus,
   object-fit: cover;
 }
 
+h2.card-title {
+  text-align: center;
+}
+
+.project-text {
+  text-align: left;
+}
+
+.card-body {
+  text-align: left;
+}
+
+
 /* Grid fallback */
 .project-grid__item {
   display: inline-block;
@@ -253,34 +246,35 @@ button:focus,
 
 
 /* feature detection for browsers reccognising grid */
-@supports (display: grid) {
-  /* set grid container w/ general display values to be applied to all children
+/* @supports (display: grid) {
+ */
+/* set grid container w/ general display values to be applied to all children
 (doesn't work when same set to children) */
-  .project-grid {
+/* .project-grid {
     display: -ms-grid;
-    display: grid;
+    display: grid; */
 
-    /* divides into 3 columns equal in size all available space using fraction unit.
+/* divides into 3 columns equal in size all available space using fraction unit.
   sets by default a grid-template-rows: auto */
-    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+/* -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr; */
 
-    /* blank cell-spacing gaps */
-    grid-gap: 20px;
+/* blank cell-spacing gaps */
+/* grid-gap: 20px;
     margin: 0%;
-  }
+  } */
 
-  .project-grid__item {
+/* .project-grid__item {
     background-color: #ff6f0089;
     padding: 15px;
-
-    /* why this 3 lines of code now? */
-    width: auto;
+ */
+/* why this 3 lines of code now? */
+/* width: auto;
     min-height: auto;
     margin: 0;
-  }
+  } */
 
-  /* .project-grid__item:last-child {
+/* .project-grid__item:last-child {
     -ms-grid-column: 3;
     grid-column: 3;
     grid-column-start: 3;
@@ -292,10 +286,10 @@ button:focus,
     -ms-grid-row-span: 2;
     grid-row-end: 3; */
 
-    /* or
+/* or
   grid-column: 3 / 3;
   grid-row: 1 / 3; */
-  /* } */
+/* } */
 }
 
 /* responsive classes for different devices */

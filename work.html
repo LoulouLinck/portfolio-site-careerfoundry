@@ -8,8 +8,9 @@
   <title>Portfolio Laure Lincker</title>
   <!-- link to favicon -->
   <link rel="shortcut icon" href="./img/favicon-L.Lincker.ico" type="image/x-icon">
-    <!-- link to Bootstrap CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- link to Bootstrap CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- link to CSS style reset/normalisation -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <!-- links from google.font to desired fonts -->
@@ -27,194 +28,226 @@
   <!-- Home nav bar -->
   <header class="page-header">
     <img class="page-header__item logo" src="img/koi_logo.svg" alt="Logo Laure Lincker">
-    <nav class="main-navigation page-header__item">        
+    <nav class="main-navigation page-header__item">
       <div class="container orange circleBehind">
         <ul role="menubar" class="navigation-list">
 
           <li role="presentation">
-            <a href="index.html" role="menuitem" class="navigation-list__item" >Home</a>
+            <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
           </li>
           <li role="presentation">
-            <a href="about.html" role="menuitem" class="navigation-list__item" >About me</a>
+            <a href="about.html" role="menuitem" class="navigation-list__item">About me</a>
           </li>
           <li>
-            <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active"
-              >Work</a>
+            <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Work</a>
           </li>
           <li role="presentation">
-            <a href="contact.html" role="menuitem" class="navigation-list__item" >Contact</a>
+            <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <!-- Main content-->
-  <main>
-    <!-- What's a section utility in the making of a grid? -->
-    <section id="projects-section">
-      <h1>My work</h1>
+  <section id="projects">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12" style="margin-top: 50px;">
+          <div class="container">
+            <div class="row">
 
-      <!--Grid container -->
-      <div class="project-grid">
+              <!-- Pokedex App Card -->
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm transparent-card">
+                  <div class="card-header">
+                    <h2 class="card-title">Pokedex</h2>
+                    <img src="./img/pokedex-screenshot.png" class="project-img" alt="Pokedex app screenshot" />
+                  </div>
+                  <div class="card-body">
 
-        <!-- Grid items -->
-        <div class="project-grid__item">
-          <h2>Pokedex</h2>
-          <img
-              src="./img/pokedex-screenshot.png"
-              class="project-img"
-              alt="Pokedex app screenshot"
-            />
-          <p class="project-text">
-            The Pokedex app is a vanilla Javascript application that fetches data from an external Pokemon API and allows the user to view and search for Pokemons. Once a Pokemon is selected, a modal will pop up with details about the respective Pokemon.
-           <br>
-           <br>
-           <p>Tech Stack:</p> 
-           <ul>
-              <li>JavaScript</li>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>External API</li>
-           </ul>
-          </p>
-          <a class="project-links" href="https://louloulinck.github.io/basic-JS-app/">Pokedex App</a>
-          <br>
-          <a class="project-links" href="https://github.com/LoulouLinck/basic-JS-app">See repository on GitHub</a>
+                    <p class="project-text">
+                      The Pokedex app is a vanilla Javascript application that fetches data from an external Pokemon API
+                      and allows the user to view and search for Pokemons. Once a Pokemon is selected, a modal will pop
+                      up with details about the respective Pokemon.
+                      <br>
+                      <br>
+                    <p>Tech Stack:</p>
+                    <ul>
+                      <li>JavaScript</li>
+                      <li>HTML5</li>
+                      <li>CSS3</li>
+                      <li>External API</li>
+                    </ul>
+                    </p>
+                    <a class="project-links" href="https://louloulinck.github.io/basic-JS-app/">Pokedex App</a>
+                    <br>
+                    <a class="project-links" href="https://github.com/LoulouLinck/basic-JS-app">See repository on
+                      GitHub</a>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- API App Card -->
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm transparent-card">
+                  <div class="card-header">
+                    <h2>Movie API</h2>
+                    <img src="./img/movie-api-logo.png" class="project-img" alt="movie API logo" />
+
+                  </div>
+                  <div class="card-body">
+                    <p class="project-text">
+                      Movie_api is the server-side component of a movies web application. This API will provide users
+                      with information about different movies, directors, and genres.
+                      <br>
+                      <br>
+                    <p>Tech Stack:</p>
+                    <ul>
+                      <li>Node</li>
+                      <li>Express</li>
+                      <li>REST</li>
+                      <li>MongoDB</li>
+                      <li>Mongoose</li>
+                    </ul>
+
+                    </p>
+                    <a class="project-links" href="https://github.com/LoulouLinck/movie_api">See repository on GitHub</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cineflix App Card -->
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm transparent-card">
+                  <h2>Cineflix</h2>
+                  <img src="./img/Screenshot-Cineflix-App.png" class="project-img" alt="screenshot of Meet App">
+                  <div class="card-body">
+                    <p class="project-text">
+                      Cineflix is the client-side app that connects with a movie database: movie_api. Together they form
+                      CineFlix, a responsive single-page application allowing user to find information about movies and
+                      bookmark them in a personal list.
+                      <br>
+                      <br>
+                    <p>Tech Stack: MERN</p>
+                    <ul>
+                      <li>React (client-side)</li>
+                      <li>Node, MongoDB, Express (server-side)</li>
+                      <li>Parcel (build tool)</li>
+                      <li>JSX</li>
+                      <li>Vanilla JS (ES2015+), HTML, CSS,</li>
+                      <li>Bootstrap (UI design and responsiveness)</li>
+                    </ul>
+
+                    </p>
+                    <a class="project-links" href="https://cineflixxx.netlify.app/">Cineflix App</a>
+                    <br>
+                    <a class="project-links" href="https://github.com/LoulouLinck/myFlix-client">See repository on
+                      GitHub</a>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Cityvent App Card -->
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm transparent-card">
+                  <h2>Cityvent</h2>
+                  <img src="./img/Screenshot-Meet-App.png" class="project-img" alt="screenshot of Meet App">
+                  <div class="card-body">
+                    <p class="project-text">
+                      Cityvent a React meet app that will allow users to find events in specified cities and theirs
+                      details. The app was built using React and Javascript, with Unit, Integration, User Acceptance and
+                      End-to-End testing. Google Calendar API and Authorization was used to verify the user before
+                      getting data with serverless toolkit provided by AWS Lambda. The app works offline and can be
+                      downloaded for desktops or mobile devices.
+                      <br>
+                      <br>
+                    <p>Tech Stack:</p>
+                    <ul>
+                      <li>React (app structure)</li>
+                      <li>Jester/Cucumber, Puppeteer (testing)</li>
+                      <li>Google Calendar API and OAuth (data and authorisation)</li>
+                      <li>AWS Lambda, OAuth2, Amazon Webservice (serverless toolkit)</li>
+                      <li>Atatus (performance monitoring)</li>
+                      <li>Rechart (data visualisation)</li>
+                    </ul>
+
+                    </p>
+                    <a class="project-links" href="https://louloulinck.github.io/Cityvent/">Cityvent App</a>
+                    <br>
+                    <a class="project-links" href="https://github.com/LoulouLinck/Cityvent">See repository on GitHub</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Chatty App Card -->
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm transparent-card">
+                  <h2>Chatty</h2>
+                  <img src="./img/chatty-screenshot.png" class="project-img" alt="Chatty app screenshot" />
+                  <div class="card-body">
+                    <p>
+                      Chatty is a user-friendly mobile chat app built React Native offering a smooth messaging
+                      experience together with the possiblility to chare images and location.
+                      <br>
+                      <br>
+                    <p>Tech Stack:</p>
+                    <ul>
+                      <li>React Native,</li>
+                      <li>Expo (JS native apps'toolchain)</li>
+                      <li>Gifted Chat (React Native library)</li>
+                      <li>Google Firestore DB (storing messages)</li>
+                      <li>Google Firebase Authentication,</li>
+                      <li>AsyncStorage caching (offline use)</li>
+                      <li>Firebase Cloud Storage (storing images)</li>
+                      <li>Expo ImagePicker and MediaLibrary (additional communication features)</li>
+                    </ul>
+                    </p>
+                    <a class="project-links" href="https://github.com/LoulouLinck/Chat-App">See project on GitHub</a>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Cineflix Angular App Card -->
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm transparent-card">
+                  <h2>Cineflix (Angular)</h2>
+                  <img src="./img/myflix-angular-screenshot.png" class="project-img"
+                    alt="MyFlix Angular app screenshot" />
+                  <div class="card-body">
+                    <p class="project-text">
+                      This is an Angular App which uses the movie api as a backend. With this app you can register or
+                      sign in a user and see a list of movies. The user can also favorite movies. This project was
+                      generated with Angular CLI.
+                    </p>
+                    <br>
+                    <br>
+                    <p>Tech Stack:</p>
+                    <ul>
+                      <li>Angular</li>
+                      <li>Typescript</li>
+                      <li>MongoDB</li>
+                      <li>Express</li>
+                      <li>Node</li>
+                      <li>Angular Material</li>
+                    </ul>
+
+                    <a class="project-links" href="#">Cineflix Angular App</a>
+                    <br>
+                    <a class="project-links" href="https://github.com/LoulouLinck/myFlix-Angular-client">See project on
+                      GitHub</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
-
-        <div class="project-grid__item">
-          <h2>Movie API</h2>
-          <img
-          src="./img/movie-api-logo.png"
-          class="project-img"
-          alt="movie API logo"
-        />
-          <p class="project-text">
-            Movie_api is the server-side component of a movies web application. This API will provide users with information about different movies, directors, and genres.
-            <br>
-            <br>
-            <p>Tech Stack:</p> 
-            <ul>
-              <li>Node</li>
-              <li>Express</li>
-              <li>REST</li>
-              <li>MongoDB</li>
-              <li>Mongoose</li>
-            </ul>
-
-          </p>
-          <a class="project-links" href="https://github.com/LoulouLinck/movie_api">See repository on GitHub</a>
-        </div>
-
-        <div class="project-grid__item">
-          <h2>Cineflix</h2>
-          <img 
-          src="./img/Screenshot-Cineflix-App.png" 
-          class="project-img" 
-          alt="screenshot of Meet App">
-          <p class="project-text">
-            Cineflix is the client-side app that connects with a movie database: movie_api. Together they form CineFlix, a responsive single-page application allowing user to find information about movies and bookmark them in a personal list.
-            <br>
-            <br>
-            <p>Tech Stack: MERN</p> 
-            <ul>
-                <li>React (client-side)</li>
-                <li>Node, MongoDB, Express (server-side)</li>
-                <li>Parcel (build tool)</li>
-                <li>JSX</li>
-                <li>Vanilla JS (ES2015+), HTML, CSS,</li>
-                <li>Bootstrap (UI design and responsiveness)</li> 
-            </ul>
-
-          </p>
-          <a class="project-links" href="https://cineflixxx.netlify.app/">Cineflix App</a>
-          <br>
-          <a class="project-links" href="https://github.com/LoulouLinck/myFlix-client">See repository on GitHub</a>
-        </div>
-
-        <div class="project-grid__item">
-          <h2>Cityvent</h2>
-          <img 
-          src="./img/Screenshot-Meet-App.png" 
-          class="project-img" 
-          alt="screenshot of Meet App">
-          <p class="project-text">
-            Cityvent a React meet app that will allow users to find events in specified cities and theirs details. The app was built using React and Javascript, with Unit, Integration, User Acceptance and End-to-End testing. Google Calendar API and Authorization was used to verify the user before getting data with serverless toolkit provided by AWS Lambda. The app works offline and can be downloaded for desktops or mobile devices.
-           <br>
-           <br>
-           <p>Tech Stack:</p> 
-           <ul>
-              <li>React (app structure)</li>
-              <li>Jester/Cucumber, Puppeteer (testing)</li>
-              <li>Google Calendar API and OAuth (data and authorisation)</li>
-              <li>AWS Lambda, OAuth2, Amazon Webservice (serverless toolkit)</li>
-              <li>Atatus (performance monitoring)</li>
-              <li>Rechart (data visualisation)</li>
-           </ul>
-
-          </p>
-          <a class="project-links" href="https://louloulinck.github.io/Cityvent/">Cityvent App</a>
-          <br>
-          <a class="project-links" href="https://github.com/LoulouLinck/Cityvent">See repository on GitHub</a>
-        </div>
-
-        <div class="project-grid__item">
-          <h2>Chatty</h2>
-          <img
-          src="./img/chatty-screenshot.png"
-          class="project-img"
-          alt="Chatty app screenshot"
-        />
-          <p>
-            Chatty is a user-friendly mobile chat app built React Native offering a smooth messaging experience together with the possiblility to chare images and location.
-          <br>
-          <br>
-          <p>Tech Stack:</p> 
-          <ul>
-            <li>React Native,</li>
-            <li>Expo (JS native apps'toolchain)</li>
-            <li>Gifted Chat (React Native library)</li>
-            <li>Google Firestore DB (storing messages)</li>
-            <li>Google Firebase Authentication,</li>
-            <li>AsyncStorage caching (offline use)</li>
-            <li>Firebase Cloud Storage (storing images)</li>
-            <li>Expo ImagePicker and MediaLibrary (additional communication features)</li>
-          </ul>
-          </p>
-          <a class="project-links" href="https://github.com/LoulouLinck/Chat-App">See project on GitHub</a>
-        </div>
-
-        <div class="project-grid__item">
-          <h2>Cineflix (Angular)</h2>
-          <img
-          src="./img/myflix-angular-screenshot.png"
-          class="project-img"
-          alt="MyFlix Angular app screenshot"
-        />
-          <p class="project-text">
-            This is an Angular App which uses the movie api as a backend. With this app you can register or sign in a user and see a list of movies. The user can also favorite movies. This project was generated with Angular CLI. 
-          </p>
-          <br>
-          <br>
-          <p>Tech Stack:</p> 
-          <ul>
-            <li>Angular</li>
-            <li>Typescript</li>
-            <li>MongoDB</li>
-            <li>Express</li>
-            <li>Node</li>
-            <li>Angular Material</li>
-          </ul>
-
-          <a class="project-links" href="./img/Screenshot-Cineflix-Angular-App.png">Cineflix Angular App</a>
-          <br>
-          <a class="project-links" href="https://github.com/LoulouLinck/myFlix-Angular-client">See project on GitHub</a>
-        </div>
-
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
 
   <!-- Footer-->
@@ -223,24 +256,30 @@
       Find me on
     </p>
     <div class="social-media">
-      <a href="https://fr.linkedin.com/in/laure-lincker" target="_blank"> 
+      <a href="https://fr.linkedin.com/in/laure-lincker" target="_blank">
         <img id="linkedin-logo" src="./img/linkedin_icon.svg" alt="linkedin">
       </a>
-      <a href="https://github.com/LoulouLinck" target="_blank"> 
-      <img id="github-logo" src="./img/github_icon.svg" alt="github">
-    </a>
-    <a href="https://www.instagram.com/laure_lincker/?hl=en" target="_blank"> 
-      <img id="instagram-logo" src="./img/instagram_icon.svg" alt="instagram">
-    </a>
-    <a href="https://medium.com/@laurelincker" target="_blank"> 
-      <img id="medium-logo" src="./img/medium_icon.png" alt="linkedin">
-    </a>
+      <a href="https://github.com/LoulouLinck" target="_blank">
+        <img id="github-logo" src="./img/github_icon.svg" alt="github">
+      </a>
+      <a href="https://www.instagram.com/laure_lincker/?hl=en" target="_blank">
+        <img id="instagram-logo" src="./img/instagram_icon.svg" alt="instagram">
+      </a>
+      <a href="https://medium.com/@laurelincker" target="_blank">
+        <img id="medium-logo" src="./img/medium_icon.png" alt="linkedin">
+      </a>
   </footer>
   <script src="JS/tota11y.min.js"></script>
   <!-- plugin for accessibility check -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
