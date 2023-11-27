@@ -20,7 +20,7 @@ body {
   padding: 20px;
 
   /* 16px = min. for body text's accessibility */
-  font-size: 16px;  line-height: 1.6;
+  font-size: 18px;  line-height: 1.6;
 }
 
 /* Specifies font-seize and Weight: default values not inherited */
@@ -45,6 +45,7 @@ h3 {
 a {
   color: #ff6e00;
   font-size: 16px;
+  display: inline-block;
 }
 
 /* Pseudo-classes for <a> */
@@ -231,11 +232,25 @@ button:focus,
   margin-left: 15px;
 }
 
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.project-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
 /* Grid fallback */
 .project-grid__item {
   display: inline-block;
   width: 33%;
+  text-align: left;
 }
+
 
 /* feature detection for browsers reccognising grid */
 @supports (display: grid) {
@@ -256,7 +271,7 @@ button:focus,
   }
 
   .project-grid__item {
-    background-color: beige;
+    background-color: #ff6f0089;
     padding: 15px;
 
     /* why this 3 lines of code now? */
@@ -265,7 +280,7 @@ button:focus,
     margin: 0;
   }
 
-  .project-grid__item:last-child {
+  /* .project-grid__item:last-child {
     -ms-grid-column: 3;
     grid-column: 3;
     grid-column-start: 3;
@@ -275,12 +290,12 @@ button:focus,
     grid-row: 1;
     grid-row-start: 1;
     -ms-grid-row-span: 2;
-    grid-row-end: 3;
+    grid-row-end: 3; */
 
     /* or
   grid-column: 3 / 3;
   grid-row: 1 / 3; */
-  }
+  /* } */
 }
 
 /* responsive classes for different devices */
@@ -303,14 +318,20 @@ button:focus,
     grid-gap: 10px;
   }
 
-  .project-grid__item:last-child {
+  /* .project-grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
-  }
+  } */
 
   h1 {
     font-size: 22px;
   }
+}
+
+.project-links {
+  display: flex;
+  position: relative;
+  align-items: center;
 }
 
 .skills-table {
