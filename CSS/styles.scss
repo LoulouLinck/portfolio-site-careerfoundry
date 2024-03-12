@@ -275,6 +275,12 @@ button:focus,
   width: 50%;
 }
 
+.about-text {
+  text-align: justify;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 /* sun animation */
 @keyframes sun-color-change {
   0% {
