@@ -367,6 +367,11 @@ h2.card-title {
   width: 50%;
 }
 
+.about-text {
+  margin: auto;
+  text-align: justify;
+}
+
 /* sun animation */
 @-webkit-keyframes sun-color-change {
   0% {
