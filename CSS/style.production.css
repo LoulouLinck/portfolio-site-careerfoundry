@@ -14,7 +14,7 @@ Make sure you keep a copy of your original “styles.css” file. If you want to
 
 /* Default styling for all tags in <body> */
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   text-align: center;
   padding: 20px;
