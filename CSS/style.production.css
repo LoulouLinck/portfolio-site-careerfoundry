@@ -193,7 +193,7 @@ button:focus,
 }
 
 .profile {
-  max-width: 700px;
+  max-width: auto;
   margin: 0 auto;
 }
 
