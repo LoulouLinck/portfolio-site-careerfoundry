@@ -296,49 +296,6 @@ button:focus,
   }
 }
 
-/* apply animation to SVG element: longhand */
-.sun {
-  animation-duration: 4s;
-  animation-name: color-change;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-
-  /* shorthand */
-
-  /* animation: 4s color-change infinite alternate linear; */
-}
-
-/* cloud animation */
-@keyframes cloud-move {
-  from {
-    transform: translate(0, 50px);
-  }
-
-  to {
-    transform: translate(200px, 50px);
-  }
-}
-
-/* apply animation to cloud SVG element
-slow movement applied: 30s */
-.cloud-front {
-  animation: 30s cloud-move infinite alternate linear;
-}
-
-@keyframes cloud-move-reverse {
-  from {
-    transform: translate(446px, 48px);
-  }
-
-  to {
-    transform: translate(100px, 48px);
-  }
-}
-
-.cloud-back {
-  animation: 34s cloud-move-reverse infinite alternate linear;
-}
 
 /* Animation nav bar w/circles behind */
 div.container a {

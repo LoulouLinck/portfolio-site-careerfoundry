@@ -320,7 +320,7 @@ h2.card-title {
   grid-column: 3 / 3;
   grid-row: 1 / 3; */
 /* } */
-}
+/* } */
 
 /* responsive classes for different devices */
 @media all and (max-width: 501px) {
@@ -371,114 +371,6 @@ h2.card-title {
   text-align: justify;
   max-width: 700px;
   margin: 0 auto;
-}
-
-/* sun animation */
-@-webkit-keyframes sun-color-change {
-  0% {
-    fill: #edc655;
-  }
-
-  50% {
-    fill: #fcffad;
-  }
-
-  100% {
-    fill: #f76414;
-  }
-}
-
-@keyframes sun-color-change {
-  0% {
-    fill: #edc655;
-  }
-
-  50% {
-    fill: #fcffad;
-  }
-
-  100% {
-    fill: #f76414;
-  }
-}
-
-/* apply animation to SVG element: longhand */
-.sun {
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
-  -webkit-animation-name: color-change;
-  animation-name: color-change;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-
-  /* shorthand */
-
-  /* animation: 4s color-change infinite alternate linear; */
-}
-
-/* cloud animation */
-@-webkit-keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
-  }
-
-  to {
-    -webkit-transform: translate(200px, 50px);
-    transform: translate(200px, 50px);
-  }
-}
-
-@keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
-  }
-
-  to {
-    -webkit-transform: translate(200px, 50px);
-    transform: translate(200px, 50px);
-  }
-}
-
-/* apply animation to cloud SVG element
-slow movement applied: 30s */
-.cloud-front {
-  -webkit-animation: 30s cloud-move infinite alternate linear;
-  animation: 30s cloud-move infinite alternate linear;
-}
-
-@-webkit-keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 48px);
-    transform: translate(446px, 48px);
-  }
-
-  to {
-    -webkit-transform: translate(100px, 48px);
-    transform: translate(100px, 48px);
-  }
-}
-
-@keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 48px);
-    transform: translate(446px, 48px);
-  }
-
-  to {
-    -webkit-transform: translate(100px, 48px);
-    transform: translate(100px, 48px);
-  }
-}
-
-.cloud-back {
-  -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-  animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
 /* Animation nav bar w/circles behind */
