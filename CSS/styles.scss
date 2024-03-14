@@ -10,7 +10,7 @@
   --sun-color2: #fcffad;
   --sun-color3: #f76414;
   --nav-bar-animation: lightsalmon;
-  --primary-font: "Ubuntu", sans-serif;
+  --primary-font: "Poppins", sans-serif;
   --font-weight-headings: var(--font-weight-headings);
   --font-size-body-links-buttons: 18px;
 }
@@ -275,6 +275,12 @@ button:focus,
   width: 50%;
 }
 
+.about-text {
+  text-align: justify;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 /* sun animation */
 @keyframes sun-color-change {
   0% {
@@ -290,49 +296,6 @@ button:focus,
   }
 }
 
-/* apply animation to SVG element: longhand */
-.sun {
-  animation-duration: 4s;
-  animation-name: color-change;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-
-  /* shorthand */
-
-  /* animation: 4s color-change infinite alternate linear; */
-}
-
-/* cloud animation */
-@keyframes cloud-move {
-  from {
-    transform: translate(0, 50px);
-  }
-
-  to {
-    transform: translate(200px, 50px);
-  }
-}
-
-/* apply animation to cloud SVG element
-slow movement applied: 30s */
-.cloud-front {
-  animation: 30s cloud-move infinite alternate linear;
-}
-
-@keyframes cloud-move-reverse {
-  from {
-    transform: translate(446px, 48px);
-  }
-
-  to {
-    transform: translate(100px, 48px);
-  }
-}
-
-.cloud-back {
-  animation: 34s cloud-move-reverse infinite alternate linear;
-}
 
 /* Animation nav bar w/circles behind */
 div.container a {
