@@ -53,19 +53,12 @@ a {
 
 /* changes colour if ever visited before */
 a:visited {
-  color: #b24d00;
-}
-
-/* default underlining of hypertext disappears when hovering over links w/ mouse or when targeted w/ a keyboard (ACCESSIBILITY)
- By default 'cursor: pointer; (cusor will appear has hand when hovering over) */
-a:hover,
-a:focus {
-  text-decoration: none;
+  color: #ff4800;
 }
 
 /* changes colour of selected link */
 a:active {
-  color: #ff8b32;
+  color: #ff4800;
 }
 
 /* feedback to user: knows from nav bar that the non-underlined item =currently visited page */
@@ -95,8 +88,8 @@ button {
   border-radius: 10px;
 
   /* gives btn a bottom border w/ a 2px width, a type of solid, and color */
-  border-bottom: 3px solid #b24d00;
-  display: inline-block;
+  /* border-bottom: 3px solid #b24d00;
+  display: inline-block; */
 
   /* shorthand: transition btw default and hover/focus states */
   -webkit-transition: opacity 0.2s;
