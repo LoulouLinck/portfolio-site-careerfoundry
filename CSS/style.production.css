@@ -53,7 +53,7 @@ a {
 
 /* changes colour if ever visited before */
 a:visited {
-  color: #ff4800;
+  color: #b24d00;
 }
 
 /* changes colour of selected link */
