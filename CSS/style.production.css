@@ -159,6 +159,10 @@ button:focus,
   border-radius: 50%;
 }
 
+.skills-bar {
+  padding-top: 10px;
+}
+
 .skills-bar img {
   height: 50px;
   margin-right: 5px;
