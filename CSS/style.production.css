@@ -172,6 +172,13 @@ button:focus,
   margin-right: 5px;
 }
 
+.text-layout {
+  padding-top: 10%;
+  text-align: justify;
+  max-width: 71.3%;
+  margin: 0 auto;
+}
+
 /* prevents footer to be affeted by floated image, remains below instead of next to it */
 .page-footer {
   clear: both;
