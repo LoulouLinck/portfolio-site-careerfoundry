@@ -159,6 +159,11 @@ button:focus,
   border-radius: 50%;
 }
 
+.skills-bar img {
+  height: 50px;
+  margin-right: 5px;
+}
+
 /* prevents footer to be affeted by floated image, remains below instead of next to it */
 .page-footer {
   clear: both;
