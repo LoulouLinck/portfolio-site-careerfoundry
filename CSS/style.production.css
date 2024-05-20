@@ -160,7 +160,8 @@ button:focus,
 }
 
 .skills-bar {
-  padding-top: 10px;
+  padding-top: 10%;
+  text-align: justify;
 }
 
 .skills-bar img {
