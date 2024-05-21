@@ -331,6 +331,25 @@ button:focus,
   margin-left: 15px;
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* Optional: Adds space between the flex items */
+}
+
+.flex-item {
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+  flex: 1 1 calc(33.333% - 20px);
+  /* Adjusts the width to 3 columns with gaps */
+  box-sizing: border-box;
+  /* Ensures padding and border are included in the width calculation */
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
