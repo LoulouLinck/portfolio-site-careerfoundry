@@ -172,6 +172,58 @@ button:focus,
   margin-right: 5px;
 }
 
+#tools-cards {
+  /* width: auto;
+  display: grid;
+  grid-gap: var(--spacing_s);
+  --auto-grid-min-size: 300px;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  justify-items: center; */
+  /* grid-auto-rows: 1fr; /* this makes all boxes equal height, */
+  /* grid-auto-flow: row; */
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.tools-cards_col {
+  margin: var(--spacing_s);
+  padding: var(--spacing_s);
+  max-width: 300px;
+
+  border: 1px solid var(--primary-color);
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.34);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.34);
+}
+#tools-cards h4 {
+  margin: var(--spacing_s);
+}
+@media all and (max-width: 660px) {
+  .tools-cards_col {
+    max-width: 100%;
+    width: 100%;
+    margin: 5px;
+  }
+  #tools-cards h4 {
+    margin-top: 0;
+  }
+}
+
 .text-layout {
   padding-top: 10%;
   text-align: justify;
