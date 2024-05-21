@@ -494,8 +494,6 @@ h2.card-title {
     color: rgb(255, 106, 0);
     padding: 10px;
     margin: 0 5px; /* Adds space between the links */
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 .project-links:hover {
   color: blue;
