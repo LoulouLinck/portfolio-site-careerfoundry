@@ -167,6 +167,12 @@ button:focus,
   background-color: #00ffdd;
 }
 
+.button__secondary {
+  background-color: #ff5e00;
+  color: #ffff;
+}
+
+
 .container-padding {
 padding-top: 150px;
 }
