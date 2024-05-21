@@ -101,6 +101,10 @@ button {
   transition-property: opacity; */
 }
 
+:root {
+  --spacing_s: 10px;
+}
+
 .button {
   /* styles btn background colour */
   background-color: #ff5e00;
