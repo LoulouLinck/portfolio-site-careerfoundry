@@ -12,6 +12,15 @@ Make sure you keep a copy of your original “styles.css” file. If you want to
 * Browsers: last 4 version
 */
 
+:root {
+  --spacing_s: 10px;
+  --spacing: 15px;
+}
+
+.padding-top {
+  padding-top: var(--spacing);
+}
+
 /* Default styling for all tags in <body> */
 body {
   font-family: 'Poppins', sans-serif;
@@ -99,10 +108,6 @@ button {
   /* longhand */
   /* transition-duration: 0.2s;
   transition-property: opacity; */
-}
-
-:root {
-  --spacing_s: 10px;
 }
 
 .button {
