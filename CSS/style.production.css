@@ -350,6 +350,10 @@ button:focus,
   /* Ensures padding and border are included in the width calculation */
 }
 
+.project-description {
+  text-align: justify;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
