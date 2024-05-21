@@ -168,10 +168,18 @@ button:focus,
 }
 
 .button__secondary {
-  background-color: #ff5e00;
+  background-color: #00ffdd;
   color: #ffff;
 }
 
+button__secondary:hover,
+button__secondary:focus,
+.button__secondary:hover,
+.button__secondary:focus {
+  cursor: pointer;
+  color: blue;
+  background-color: #ff5e00;
+}
 
 .container-padding {
 padding-top: 150px;
