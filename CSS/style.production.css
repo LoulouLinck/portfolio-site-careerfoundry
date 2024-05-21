@@ -298,6 +298,7 @@ button:focus,
   display: flex;
   width: 100%;
   padding: 20px;
+  position: fixed; /* Fixes the header at the top */
 }
 
 /* no growing, ability to shrink, base width 200px */
