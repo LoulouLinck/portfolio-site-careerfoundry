@@ -70,6 +70,13 @@ a:active {
   color: #ff4800;
 }
 
+/* default underlining of hypertext disappears when hovering over links w/ mouse or when targeted w/ a keyboard (ACCESSIBILITY)
+ By default 'cursor: pointer; (cusor will appear has hand when hovering over) */
+ a:hover,
+ a:focus {
+   text-decoration: none;
+ }
+
 /* feedback to user: knows from nav bar that the non-underlined item =currently visited page */
 .navigation-list__item--active {
   text-decoration: none;
