@@ -488,10 +488,17 @@ h2.card-title {
   }
 }
 
-.project-links {
-  display: flex;
-  position: relative;
-  align-items: center;
+  .project-links {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 106, 0);
+    padding: 10px;
+    margin: 0 5px; /* Adds space between the links */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.project-links:hover {
+  color: blue;
 }
 
 .skills-table {
