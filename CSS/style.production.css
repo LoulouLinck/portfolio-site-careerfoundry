@@ -216,7 +216,6 @@ button:focus,
 }
 #tools-cards h4 {
   margin: var(--spacing_s);
-  color: #00ffdd;
 }
 @media all and (max-width: 660px) {
   .tools-cards_col {
@@ -237,6 +236,7 @@ button:focus,
   white-space: nowrap;
   text-align: center;
   line-height: 2;
+  font-weight: bolder;
 }
 
 .text-layout {
