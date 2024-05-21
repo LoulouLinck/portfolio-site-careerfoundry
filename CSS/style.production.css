@@ -228,6 +228,15 @@ button:focus,
   }
 }
 
+.tech-card {
+  background-color: #00ffdd;
+  color: white;
+  border-radius: 5px;
+  padding: 2px 5px;
+  white-space: nowrap;
+  text-align: center;
+}
+
 .text-layout {
   padding-top: 10%;
   text-align: justify;
