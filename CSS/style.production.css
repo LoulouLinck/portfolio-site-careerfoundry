@@ -355,6 +355,10 @@ padding-top: 150px;
   margin-left: 15px;
 }
 
+#work-page {
+  text-align: justify;
+}
+
 .flex-container {
   display: flex;
   flex-wrap: wrap;
