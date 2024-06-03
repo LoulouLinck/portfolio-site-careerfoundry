@@ -338,10 +338,10 @@ padding-top: 150px;
 
 /* nav bar: rest of width spacce, right aligned */
 .page-header__item:last-child {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   flex-grow: 1;
-  text-align: right;
 }
 
 /* bullet points of unordered list styling */
@@ -354,6 +354,53 @@ padding-top: 150px;
   display: inline-block;
   margin-left: 15px;
 }
+
+/********************************** Hamburger menu ********************/
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ff6d54;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .navigation-list {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px; /* Adjust based on your header height */
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 10px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navigation-list.active {
+      display: flex;
+    }
+
+    .navigation-list li {
+      /* display: block; */
+      /* margin: 10px 0; */
+      text-align: center;
+    }
+
+    .navigation-list a {
+      color: #333;
+    }
+  }
 
 #work-page {
   text-align: justify;
