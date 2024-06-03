@@ -435,18 +435,24 @@ div.circleBehind a:hover:after {
   padding-top: 100px;
 }
 
-
+/************************* SKILLS BAR ****************/
 .skills-bar {
-  padding-top: 10%;
-  text-align: justify;
-  max-width: 71.3%;
-  margin: 0 auto;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  text-align: center;
+  width: 100%;
   /* padding-top: 100px; */
 }
 
 .skills-bar img {
   height: 50px;
   margin-right: 5px;
+}
+
+/************************* SKILLS TABLE ****************/
+.skills-table {
+  display: inline-block;
+  clear: both;
 }
 
 #tools-cards {
@@ -477,18 +483,15 @@ div.circleBehind a:hover:after {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+
 .tools-cards_col {
   margin: var(--spacing_s);
   padding: var(--spacing_s);
   max-width: 300px;
-
   border: 1px solid var(--primary-color);
   border-radius: 20px;
   -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.34);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.34);
-}
-#tools-cards h4 {
-  margin: var(--spacing_s);
 }
 @media all and (max-width: 660px) {
   .tools-cards_col {
@@ -496,9 +499,12 @@ div.circleBehind a:hover:after {
     width: 100%;
     margin: 5px;
   }
-  #tools-cards h4 {
-    margin-top: 0;
-  }
+}
+
+#tools-cards h4 {
+  margin: var(--spacing_s);
+  text-align: center;
+  margin-top: 0;
 }
 
 .tech-card {
