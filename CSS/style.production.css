@@ -12,6 +12,7 @@ Make sure you keep a copy of your original “styles.css” file. If you want to
 * Browsers: last 4 version
 */
 
+/****************************************** LIST of REPEATED ELEMENTS *********************************/
 :root {
   --spacing_s: 10px;
   --spacing: 15px;
@@ -27,10 +28,19 @@ body {
   font-weight: 400;
   text-align: center;
   padding: 20px;
+  padding-top: 200px; /* to avoid header covering body content */
 
   /* 16px = min. for body text's accessibility */
   font-size: 18px;
   line-height: 1.6;
+}
+
+/* Alignment style of all elements: text all types of contents */
+.content-alignment {
+  text-align: justify;
+  /* max-width: 71.3%; */
+  margin: 0 auto;
+  /* padding-top: 100px; */
 }
 
 /* Specifies font-seize and Weight: default values not inherited */
@@ -179,6 +189,13 @@ button__secondary:focus,
   cursor: pointer;
   color: blue;
   background-color: #ff5e00;
+}
+
+.text-layout {
+  /* padding-top: 10%; */
+  text-align: justify;
+  max-width: 71.3%;
+  margin: 0 auto;
 }
 
 .container-padding {
