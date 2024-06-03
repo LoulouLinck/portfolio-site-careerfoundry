@@ -202,6 +202,9 @@ button__secondary:focus,
 padding-top: 150px;
 }
 
+/*********************************************************** NAVIGATION BAR ***************************************/
+/******************************* Navigation bar & logo *****************/
+
 /* places the img on the left of the page with text on its right side */
 .profile__portrait {
   float: left;
@@ -209,6 +212,117 @@ padding-top: 150px;
   margin-right: 40px;
   border-radius: 50%;
 }
+
+
+.profile {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+/* OR */
+/* .profile {
+  max-width: 700px;
+  margin: 0 auto;
+} */
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* header (logo+nab bar) covers full width of page */
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  position: fixed; /* Fixes the header at the top */
+  background-color: #fff;
+  top: 0; /* Position at the top */
+  left: 0;
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for better visibility */
+}
+
+/* no growing, ability to shrink, base width 200px */
+.page-header__item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 200px;
+  flex: 0 1 200px;
+}
+
+.logo {
+  width: 200px;
+  height: 70px;
+}
+
+/* nav bar: rest of width spacce, right aligned */
+.page-header__item:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+
+/* bullet points of unordered list styling */
+.navigation-list {
+  list-style-type: none;
+}
+
+/* align list item in a row: in inline-block fashion rather than li */
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+/********************************** Hamburger menu ********************/
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ff6d54;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .navigation-list {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px; /* Adjust based on your header height */
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 10px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navigation-list.active {
+      display: flex;
+    }
+
+    .navigation-list li {
+      /* display: block; */
+      /* margin: 10px 0; */
+      text-align: center;
+    }
+
+    .navigation-list a {
+      color: #333;
+    }
+  }
+
 
 .skills-bar {
   padding-top: 10%;
@@ -314,110 +428,6 @@ padding-top: 150px;
 #icon-credits {
   font-size: 14px;
 }
-
-.profile {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* header (logo+nab bar) covers full width of page */
-.page-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  padding: 20px;
-  position: fixed; /* Fixes the header at the top */
-  background-color: #fff;
-  top: 0; /* Position at the top */
-  left: 0;
-  z-index: 1000; /* Ensure it stays on top of other elements */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for better visibility */
-}
-
-/* no growing, ability to shrink, base width 200px */
-.page-header__item {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 200px;
-  flex: 0 1 200px;
-}
-
-.logo {
-  width: 200px;
-  height: 70px;
-}
-
-/* nav bar: rest of width spacce, right aligned */
-.page-header__item:last-child {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-grow: 1;
-}
-
-/* bullet points of unordered list styling */
-.navigation-list {
-  list-style-type: none;
-}
-
-/* align list item in a row: in inline-block fashion rather than li */
-.navigation-list li {
-  display: inline-block;
-  margin-left: 15px;
-}
-
-/********************************** Hamburger menu ********************/
-.menu-icon {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.menu-icon .bar {
-  width: 25px;
-  height: 3px;
-  background-color: #ff6d54;
-  margin: 4px 0;
-  transition: 0.4s;
-}
-
-@media (max-width: 768px) {
-  .menu-icon {
-    display: flex;
-  }
-
-  .navigation-list {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 70px; /* Adjust based on your header height */
-      left: 0;
-      width: 100%;
-      background-color: #fff;
-      padding: 10px 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .navigation-list.active {
-      display: flex;
-    }
-
-    .navigation-list li {
-      /* display: block; */
-      /* margin: 10px 0; */
-      text-align: center;
-    }
-
-    .navigation-list a {
-      color: #333;
-    }
-  }
 
 #work-page {
   text-align: justify;
