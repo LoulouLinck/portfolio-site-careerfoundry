@@ -484,6 +484,10 @@ div.circleBehind a:hover:after {
   flex-wrap: wrap;
 }
 
+.tools-cards_cards-container {
+  text-align: center;
+}
+
 .tools-cards_col {
   margin: var(--spacing_s);
   padding: var(--spacing_s);
