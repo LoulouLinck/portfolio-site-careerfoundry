@@ -450,10 +450,10 @@ div.circleBehind a:hover:after {
 }
 
 /************************* SKILLS TABLE ****************/
-.skills-table {
+/* .skills-table {
   display: inline-block;
   clear: both;
-}
+} */
 
 #tools-cards {
   /* width: auto;
@@ -518,38 +518,10 @@ div.circleBehind a:hover:after {
   font-weight: bolder;
 }
 
-.text-layout {
-  padding-top: 10%;
+/*********************************************************************** WORK SECTION  **************************************************/
+/* #work-page {
   text-align: justify;
-  max-width: 71.3%;
-  margin: 0 auto;
-}
-
-/* prevents footer to be affeted by floated image, remains below instead of next to it */
-.page-footer {
-  clear: both;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  text-align: center;
-}
-
-#medium-logo {
-  width: 30px;
-  height: 30px;
-}
-
-#icon-credits {
-  font-size: 14px;
-}
-
-#work-page {
-  text-align: justify;
-}
+} */
 
 .flex-container {
   display: flex;
@@ -711,15 +683,27 @@ h2.card-title {
   max-width: 100%; /* Prevents the image from being wider than the container */
 }
 
-.skills-table {
-  display: inline-block;
-  clear: both;
+/**************************************************************************** CONTACT SECTION ***************/
+#contact-page {
+  margin-top: 10%;
+  margin-bottom: 5%;
 }
 
+/**************************************************************************** FOOTER *********************************/
+/* prevents footer to be affeted by floated image, remains below instead of next to it */
+.page-footer {
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
 
-.about-text {
-  text-align: justify;
-  max-width: 71.3%;
-  margin: 0 auto;
-  padding-top: 100px;
+#medium-logo {
+  width: 30px;
+  height: 30px;
 }
