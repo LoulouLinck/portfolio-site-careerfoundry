@@ -98,8 +98,6 @@ button {
   background-color: #ff6e00;
   /* styles font colour */
   color: #fff;
-  /* takes the font from the parent container */
-  font-family: inherit;
   font-size: 16px;
   /* adds spacing to the btn */
   padding: 10px;
@@ -121,8 +119,6 @@ button {
   background-color: #ff5e00;
   /* styles font colour */
   color: #fff;
-  /* takes parent container's font  */
-  font-family: inherit;
   font-size: 16px;
   /* adds spacing to the btn */
   padding: 10px;
