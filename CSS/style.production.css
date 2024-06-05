@@ -543,8 +543,8 @@ div.circleBehind a:hover:after {
   text-align: center;
   padding: 20px;
   font-size: 20px;
-  flex: 1 1 calc(33.333% - 20px);
-  /* Adjusts the width to 3 columns with gaps */
+  flex: 1 1 calc(50% - 20px);
+  /* Adjusts the width to 2 columns with gaps */
   box-sizing: border-box;
   /* Ensures padding and border are included in the width calculation */
 }
