@@ -96,26 +96,16 @@ a:active {
 button {
   /* styles btn background colour */
   background-color: #ff6e00;
-
   /* styles font colour */
   color: #fff;
-
   /* takes the font from the parent container */
-
-  /* font-family: inherit; */
+  font-family: inherit;
   font-size: 16px;
   /* adds spacing to the btn */
   padding: 10px;
-
-  /* overwrites browser defaults and resets the border */
   border: none;
-
-  /* rounds up the angles of btn border */
   border-radius: 10px;
-
-  /* gives btn a bottom border w/ a 2px width, a type of solid, and color */
-  /* border-bottom: 3px solid #b24d00;
-  display: inline-block; */
+  /* display: inline-block; */
 
   /* shorthand: transition btw default and hover/focus states */
   -webkit-transition: opacity 0.2s;
@@ -128,30 +118,18 @@ button {
 }
 
 .button {
-  /* styles btn background colour */
   background-color: #ff5e00;
-
   /* styles font colour */
   color: #fff;
-
-  /* takes the font from the parent container */
-
-  /* font-family: inherit; */
+  /* takes parent container's font  */
+  font-family: inherit;
   font-size: 16px;
-
   /* adds spacing to the btn */
   padding: 10px;
-
   /* margin adds spacing around the btn and other elements */
   /* margin: 10px; */
-
-  /* overwrites browser defaults and resets the border */
   border: none;
-
-  /* rounds up the angles of btn border */
   border-radius: 10px;
-
-  /* gives btn a bottom border w/ a 2px width, a type of solid, and color */
   border-bottom: 3px solid #b24d00;
   /* display: inline-block; */
 
