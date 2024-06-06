@@ -525,10 +525,16 @@ div.circleBehind a:hover:after {
   font-weight: bolder;
 }
 
+/*********************************************************************** ABOUT SECTION  **************************************************/
+
+#work-page {
+  margin-top: 10%;
+}
+
 /*********************************************************************** WORK SECTION  **************************************************/
-/* #work-page {
-  text-align: justify;
-} */
+#work-page {
+  margin-top: 10%;
+}
 
 .flex-container {
   display: flex;
