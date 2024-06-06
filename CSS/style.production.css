@@ -541,7 +541,7 @@ div.circleBehind a:hover:after {
   background-color: #ffffff;
   border: 1px solid #ccc;
   text-align: center;
-  padding: 20px;
+  padding-bottom: 20px;
   margin: 20px;
   font-size: 20px;
   flex: 1 1 calc(50% - 60px);
@@ -550,8 +550,13 @@ div.circleBehind a:hover:after {
   /* Ensures padding and border are included in the width calculation */
 }
 
+.tech-cards-container {
+  padding: 2% 5%;
+}
+
 .project-description {
   text-align: justify;
+  padding: 0 5%;
 }
 
 .project-grid {
