@@ -540,6 +540,9 @@ div.circleBehind a:hover:after {
 .flex-item {
   background-color: #ffffff;
   border: 1px solid #ccc;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.34);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.34);
   text-align: center;
   padding-bottom: 20px;
   margin: 20px;
