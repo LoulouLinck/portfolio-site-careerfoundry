@@ -10,7 +10,7 @@
   <link rel="shortcut icon" href="./img/favicon-L.Lincker.ico" type="image/x-icon">
   <!-- link to CSS style reset/normalisation -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <!-- links from google.font to desired fonts -->
+  <!-- links to desired fonts from google.font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -20,60 +20,371 @@
 </head>
 
 <body>
-  <!-- Home nav bar -->
+  <!------------------------------------------- HEADER & NAV BAR ------------------------------------------------------------------------------------------------------------------------------------->
   <header class="page-header">
     <img class="page-header__item logo" src="img/koi_logo.svg" alt="Logo Laure Lincker">
     <nav class="main-navigation page-header__item">
       <div class="container orange circleBehind">
-        <ul role="menubar" class="navigation-list">
-
-
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul role="menubar" class="navigation-list" id="nav-links">
           <li role="presentation">
-            <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+            <a href="index.html#home-page" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
           </li>
-          <!-- <li role="presentation">
-            <a href="about.html" role="menuitem" class="navigation-list__item">About me</a>
-          </li> -->
+          <li role="presentation">
+            <a href="index.html#about-page" role="menuitem" class="navigation-list__item">About me</a>
+          </li>
           <li>
-            <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+            <a href="index.html#work-page" role="menuitem" class="navigation-list__item">Work</a>
           </li>
           <li role="presentation">
-            <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+            <a href="index.html#contact-page" role="menuitem" class="navigation-list__item">Contact</a>
           </li>
-
         </ul>
       </div>
     </nav>
-
   </header>
 
-  <!-- About me -->
-  <main class="container-padding">
-<div class="profile">
-<img class="profile__portrait" src="./img/profile-picture-L.Lincker.png" alt="profile picture Laure Lincker">
-    <h1>
-      Hi, <br>
-      I'm <span style="color: #03f7fb">Laure Lincker</span> aka Loulou, 
-      <br>
-      a <span style="color: #03f7fb">Full-Stack Web Developer</span>  
-      <br>
-      based in Berlin.
-   </h1>
-   <a href="img/Laure_Lincker_Resume.pdf" class="button" download>Download my CV</a>
-</div>
+  <!--------------------------------------------- HOME --------------------------------------------------------------------------------------------------------------------------------------------->
+  <div class="content-alignment">
     
+    <section id="home-page">
+      <div class="text-layout">
+        <!-- Item left -->
+        <div class="profile-item-left">
+          <img class="profile__portrait" src="./img/profile-picture-L.Lincker.png" alt="profile picture Laure Lincker">
+          </div>
+        <!-- Item right -->
+         <div class="profile-item-right">
+          <h1 class="greeting-msg">
+            Hi, <br>
+            I'm <span style="color: #00ffdd">Laure Lincker</span> aka Loulou,
+            <br>
+            <span style="color: #00ffdd">Full-Stack Web Developer</span>
+            <br>
+            & former <span style="color: #00ffdd">Cultural Mediator</span>.
+          </h1> 
+           <div class="buttons-home">
+         <a href="img/Laure_Lincker_Resume.pdf" class="button" download>Download my CV</a>
+          <a href="index.html#work-page" class="button button__secondary">My Projects</a>
+       </div>
+        </div>
+   <!------------------------------------------ HOME MSG ------------------------------------------------------------------------------------------------------------------------------------------->   
+   <p class="home-msg">
+    Having worked with up to 400 visitors daily, developing extensive interviewing skills and helping visitor
+    experience
+    improvement,
+    my background informs my design and sector of interest.
+    I now design products with complex users' needs and looking forward to designing products solving social,
+    educational and environmental issues.
+    Specialised in JavaScript, I enjoy designing responsive and secure apps from start to finish, including
+    developing,
+    testing, debugging and
+    deploying APIs with the MERN stack.
+  </p> 
+</div>
+<!------------------------------------------ SKILLS-BAR ------------------------------------------------------------------------------------------------------------------------------------------->
+<div class="skills-bar">
+  <img src="img/javascript-logo.svg" alt="javascript">
+  <img src="img/html-5-logo.png" alt="html">
+  <img src="img/css-3-logo.png" alt="">
+  <img src="img/typescript_logo.png" alt="">
+  <img src="img/nodejs_logo.png" alt="">
+  <img src="img/mongoDB_logo.png" alt="">
+  <img src="img/mysql_logo.png" alt="">
+  <img src="img/postgresql_logo.png" alt="">
+  <img src="img/angularjs_logo.png" alt="">
+  <img src="img/react_logo.png" alt="">
+  <img src="img/bootstrap_logo.png" alt="">
+  <img src="img/react_native_logo.png" alt="">
+  <img src="img/jquery_logo.png" alt="">
+  <img src="img/aws_logo.png" alt="">
+  <img src="img/firebase_logo.png" alt="">
+  <img src="img/netlify_logo.png" alt="">
+  <img src="img/git_logo.png" alt="">
+  <img src="img/github_logo.png" alt="">
+  <img src="img/cucumber_logo.png" alt="">
+  <img src="img/puppeteer_logo.svg" alt="">
+</div>
 
-   <div class="about-text">  
-    <h2>About me</h2>
-    <p class="main__about--text">
-With a background in History, I turned my skills in treating qualitative data towards quantitative data by seeking for further studies in backend development. A cultural mediator, I worked with up to 50 colleagues and 400 visitors daily collecting their feedback through debates and continuous reporting. This allowed the visitor experience to improve considerably and to adapt holistically to visitors’ concerns. Having worked extensively with various audiences, I am keen on presenting data to users with their best interest in mind. So I went full-stack! With a focus on people-centred cultural management as a scholar, I now am excited to contribute to products that solve social, educational and environmental problems at a crossroad between Culture and Tech industries.
-    </p> 
-   </div>
+<!------------------------------------------ SKILLS-CARD ------------------------------------------------------------------------------------------------------------------------------------------>
+<div id="tools-cards" class="padding-top">
+  <div class="tools-cards_col">
+    <h4>Languages</h4>
+    <div class="tools-cards_cards-container">
+      <span class="tech-card">HTML</span>
+      <span class="tech-card">CSS</span>
+      <span class="tech-card">JavaScript</span>
+      <span class="tech-card">TypeScript</span>
+    </div>
+  </div>
+  <div class="tools-cards_col">
+    <h4>Frontend libraries & frameworks</h4>
+    <div class="tools-cards_cards-container">
+      <span class="tech-card">jQuery</span>
+      <span class="tech-card">Bootstrap</span>
+      <span class="tech-card">React</span>
+      <span class="tech-card">React-Redux</span>
+      <span class="tech-card">Angular</span>
+      <span class="tech-card">Angular-Material</span>
+    </div>
+  </div>
+  <div class="tools-cards_col">
+    <h4>Backend and other libraries</h4>
+    <div class="tools-cards_cards-container">
+      <span class="tech-card">NodeJS</span>
+      <span class="tech-card">Express</span>
+      <span class="tech-card">Morgan</span>
+      <span class="tech-card">CORS</span>
+      <span class="tech-card">Axios</span>
+      <span class="tech-card">Parcel</span>
+      <span class="tech-card">PropTypes</span>
+      <span class="tech-card">serverless</span>
+      <span class="tech-card">Recharts</span>
+    </div>
+  </div>
+  <div class="tools-cards_col">
+    <h4>Testing & QA</h4>
+    <div class="tools-cards_cards-container">
+      <span class="tech-card">Postman</span>
+      <span class="tech-card">Jest</span>
+      <span class="tech-card">Enzyme</span>
+      <span class="tech-card">Cucumber</span>
+      <span class="tech-card">Puppeteer</span>
+    </div>
+  </div>
+  <div class="tools-cards_col">
+    <h4>Documentation</h4>
+    <div class="tools-cards_cards-container">
+      <span class="tech-card">JSDoc</span>
+      <span class="tech-card">TypeDoc</span>
+    </div>
+  </div>
+  <div class="tools-cards_col">
+    <h4>Web services & databases</h4>
+    <div class="tools-cards_cards-container">
+      <span class="tech-card">GitHub</span>
+      <span class="tech-card">AWS</span>
+      <span class="tech-card">MongoDB</span>
+      <span class="tech-card">PostgreSQL</span>
+      <span class="tech-card">Google Firestore</span>
+      <span class="tech-card">Heroku</span>
+      <span class="tech-card">Netlify</span>
+    </div>
+  </div>
+  <div class="tools-cards_col">
+    <h4>Mobile Apps</h4>
+    <div class="tools-cards_cards-container">
+      <span class="tech-card">PWA</span>
+      <span class="tech-card">React Native</span>
+      <span class="tech-card">Android Studio</span>
+      <span class="tech-card">Expo</span>
+    </div>
+  </div>
+</div>
+     </section>
+<!------------------------------------------- ABOUT ME --------------------------------------------------------------------------------------------------------------------------------------------->
+<section id="about-page"> 
+  <div class="text-layout">
+<h2 >About me</h2>
+<p class="main__about--text">
+  With a background in History, I turned my skills in treating qualitative data towards quantitative data by seeking
+  for further studies in backend development.
+  A cultural mediator, I worked with an international team of 50 colleagues and a wide spectrum of publics
+  collecting their feedback through debates and continuous
+  reporting. This allowed the visitor experience to improve considerably and to adapt holistically to visitors’
+  concerns. Having worked extensively with various
+  audiences, I am keen on presenting data to users with their best interest in mind. So I went full-stack! With a
+  focus on people-centred cultural management as a
+  scholar, I now am excited to contribute to philantropic products at a crossroad between Culture and Tech
+  industries.
+</p>
 <!-- Outside of work you'll find me strolling down the canals and parks of Berlin, Störtebeker in hand, trying my best bird impressions in the wild. I'm known for spending 99% of my time wearing my iconic green jogging and if the wheather allows, a wollen bathrobe-like cardigan for a modern female Lebowski-look. I love cooking, thinking about food, talking about food and eating the actual food.   -->
-    <a href="https://github.com/LoulouLinck">Check out some of my code</a>
-  </main>
+<a href="https://github.com/LoulouLinck">Check out some of my code</a>
+</div>
+</section>
 
-  <!-- Footer: should it also use more accessiblity w/focus?-->
+  <!------------------------------------------- WORK --------------------------------------------------------------------------------------------------------------------------------------------->
+  <br>
+  <br>
+  <section id="work-page">
+    <h2>Web Development Projects </h2>
+<br>
+<div class="flex-container">
+<div class="flex-item">
+  <h3>Portfolio</h3>
+  <img class="project-img" src="./img/Screenshot-Portfolio.png">
+  <p class="project-description">
+    For the sack of coding practice I chose not to use any modules, libraries, frameworks or build tools. Every
+    single line of code in this project is hand-written.
+  </p>
+  <div class="tech-cards-container">
+    <span class="tech-card">HTML</span>
+    <span class="tech-card">CSS</span>
+    <span class="tech-card">JavaScript</span>
+    <span class="tech-card">Responsive</span>
+  </div>
+  <a class="project-links" href="https://github.com/LoulouLinck/portfolio-site-careerfoundry">GitHub</a>
+</div>
+<div class="flex-item">
+  <h3>Pokedex</h3>
+  <img class="project-img" src="./img/pokedex-screenshot.png">
+  <p class="project-description">
+    The Pokedex app is a vanilla Javascript application that fetches data from an external Pokemon API and allows
+    the user to view and search for Pokemons. Once a Pokemon is selected, a modal will pop up with details about the
+    respective Pokemon.
+  </p>
+  <div class="tech-cards-container">
+    <span class="tech-card">HTML5</span>
+    <span class="tech-card">CSS3</span>
+    <span class="tech-card">JavaScript</span>
+    <span class="tech-card">External API</span>
+  </div>
+    <a class="project-links" href=" https://louloulinck.github.io/basic-JS-app/">Pokedex</a>
+    <a class="project-links" href="https://github.com/LoulouLinck/basic-JS-app">GitHub</a>
+  </div>
+<div class="flex-item">
+  <h3>Movie API</h3>
+  <img class="project-img" src="./img/movie-api-logo.png">
+  <p class="project-description">
+    Movie_api is the server-side component of a movies web application. This API will provide users with information
+    about different movies, directors, and genres.
+  </p>
+  <div class="tech-cards-container">
+    <span class="tech-card">Node</span>
+    <span class="tech-card">Express</span>
+    <span class="tech-card">MongoDB</span>
+    <span class="tech-card">Mongoose</span>
+    <span class="tech-card">Morgan</span>
+    <span class="tech-card">CORS</span>
+    <span class="tech-card">Postman</span>
+    <span class="tech-card">Render</span>
+    <span class="tech-card">JSDoc</span>
+  </div>
+  <a class="project-links" href="https://github.com/LoulouLinck/movie_api">GitHub</a>
+  <a class="project-links" href="case-study.html">Case Study</a>
+</div>
+<div class="flex-item">
+  <h3>Cineflix</h3>
+  <img class="project-img" src="./img/Screenshot-Cineflix-App.png">
+  <p class="project-description">
+    Cineflix is the client-side app that connects with a movie database: movie_api. Together they form CineFlix, a
+    responsive single- page application allowing user to find information about movies and bookmark them in a
+    personal list.
+  </p>
+  <div class="tech-cards-container">
+    <span class="tech-card">React</span>
+    <span class="tech-card">Parcel</span>
+    <span class="tech-card">JSX</span>
+    <span class="tech-card">Vanilla JS (ES2015+)</span>
+    <span class="tech-card">Bootstrap</span>
+  </div>
+  <a class="project-links" href="https://cineflixxx.netlify.app/">Cineflix</a>
+  <a class="project-links" href="https://github.com/LoulouLinck/myFlix-client">GitHub</a>
+</div>
+<div class="flex-item">
+  <h3>Cityvent</h3>
+  <img class="project-img" src="./img/Screenshot-Meet-App.png">
+  <p class="project-description">
+    Cityvent a React meet app that will allow users to find events in specified cities and theirs details. The app
+    was built using React and Javascript, with Unit, Integration, User Acceptance and End-to-End testing. Google
+    Calendar API and Authorization was used to verify the user before getting data with serverless toolkit provided
+    by AWS Lambda. The app works offline and can be downloaded for desktops or mobile devices.
+  </p>
+  <div class="tech-cards-container">
+    <span class="tech-card">React</span>
+    <span class="tech-card">Jester</span>
+    <span class="tech-card">Cucumber</span>
+    <span class="tech-card">Puppeteer</span>
+    <span class="tech-card">Google Calandar API</span>
+    <span class="tech-card">OAuth</span>
+    <span class="tech-card">AWS Lambda</span>
+    <span class="tech-card">AWS serverless toolkit</span>
+    <span class="tech-card">Atatus</span>
+    <span class="tech-card">Rechart</span>
+  </div>
+  <a class="project-links" href="https://louloulinck.github.io/Cityvent/">Cityvent</a>
+  <a class="project-links" href="https://github.com/LoulouLinck/Cityvent">GitHub</a>
+</div>
+<div class="flex-item">
+  <h3>Chatty</h3>
+  <img class="project-img" src="./img/chatty-screenshot.png">
+  <p class="project-description">
+    Chatty is a user-friendly mobile chat app built React Native offering a smooth messaging experience together
+    with the possiblility to chare images and location.
+  </p>
+  <div class="tech-cards-container">
+    <span class="tech-card">React Native</span>
+    <span class="tech-card">Expo</span>
+    <span class="tech-card">Gifted Chat</span>
+    <span class="tech-card">Google Firestore DB</span>
+    <span class="tech-card">Google Firebase Authentification</span>
+    <span class="tech-card">AsyncStorage caching</span>
+    <span class="tech-card">Firebase Cloud Storage</span>
+    <span class="tech-card">Expo Image Picker</span>
+    <span class="tech-card">Expo MediaLibrary</span>
+  </div>
+  <a class="project-links" href="https://github.com/LoulouLinck/Chat-App">GitHub</a>
+</div>
+</div>
+</section>
+
+   <!------------------------------------ CONTACT PAGE --------------------------------------------------------------------------------------------------------------------------------------------->
+   <section id="contact-page" class="text-layout" >
+      <h2>Contact me</h2>
+      <p>
+        Looking for opportunities that reflect my versatile interests and profile,
+        I hope to collaborate on exciting projects in the Culture, Education and Social sectors with international
+        teams.
+        Open for on-site  or hybrid work in Berlin.
+      </p>
+
+      <!-- Telephone: <a href="tel:+49_1525_811698" target="_blank">+49 1525 811698</a><br> -->
+      Skype: <a href="skype:live:laure.lincker" target="_blank">live:laure.lincker</a><br>
+      Mail: <a href="mailto:laure.lincker@gmail.com" target="_blank">laure.lincker@gmail.com</a><br>
+      <!-- <br>
+      <a href="mailto:laure.lincker@gmail.com" target="_blank">Contact me</a>
+      <br> -->
+
+    <!------------------------------------ CONTACT FORM --------------------------------------------------------------------------------------------------------------------------------------------->
+      <br>
+      <form action="mailto:laure.lincker@gmail.com" method="post" id="contact-form" enctype="text/plain">
+      <!--action="URL where form's data is sent and stored"; 
+            method="get or post: HTTP method used to send data" 
+            id="since this contact form will be the only one: distinguish it from other types of form with an ID attribute."-->
+
+      <label for="User-name" class="standard-label">Your name</label><br>
+      <!-- label: gives title to form elements. Helps screen readers to click in text boxes, toggle small buttons or tick boxes. Reads aloud label as description. Here text box named "Your Name"-->
+      <!-- for="should be equal to the id attribute of input element to bind them together"-->
+      <!--class="allows to group all labels under same group to be styled w/CSS later"-->
+      <input type="text" id="User-name" name="userName"><br>
+      <!-- type="text, email, number, date, time, other semantics"-->
+      <!--name= A MUST "values entered in input field won't be sent w/out defining one" -->
+
+      <label for="User-email" class="standard-label">Your email*</label><br>
+        <input type="email" id="User-email" name="userEmail" required><br>
+      <!-- type="email: HTML5 form validation"-->
+
+      <label for="User-msg" class="standard-label">Your message*</label><br>
+        <textarea id="User-msg" name="userMsg" maxlength="240" required></textarea><br><br>
+      <!-- textarea: bigger text box
+              maxlength="set character limit" -->
+      <!-- required attribute: no submition by user without value input. When not included, input is option for submition validation. Place this attribute at the end. -->
+
+      <button type="submit">Submit</button>
+      <!-- type="submit": submits values using action and method predefined in <form> tag
+      type="reset": delete ALL user inputs. Bad practice.
+      works with JS for custom buttons  -->
+      </form>
+  </section>
+
+  </div>
+
+  <!-------------------------------------------- FOOTER -------------------------------------------------------------------------------------------------------------------------------------------->
+  <!--should it also use more accessiblity w/focus?-->
   <footer class="page-footer">
     <p>
       Find me on
@@ -95,11 +406,13 @@ With a background in History, I turned my skills in treating qualitative data to
       <a href="impressum.html" class="impressum">Impressum</a>
       <br>
       <br>
-      <a href="https://www.flaticon.com/free-icons/medium" title="icons" id="icon-credits">icons created by Enamo Studios -
-        Flaticon</a>
+      <!-- <a href="https://www.flaticon.com/free-icons/medium" title="icons" id="icon-credits">icons created by Enamo Studios -
+        Flaticon</a> -->  
+      <!-- <a href="#">Back to top</a> -->
   </footer>
 
-  <!-- <a href="#">Back to top</a> -->
+  <script src="JS/hamburger-menu.js"></script>
+  <!-- plugin checking if your HTML is accessible -->
   <script src="JS/tota11y.min.js"></script>
 </body>
 

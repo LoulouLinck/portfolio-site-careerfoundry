@@ -12,32 +12,51 @@ Make sure you keep a copy of your original “styles.css” file. If you want to
 * Browsers: last 4 version
 */
 
+/****************************************** LIST of REPEATED ELEMENTS *********************************/
+:root {
+  --spacing_s: 10px;
+  --spacing: 15px;
+}
+
+.padding-top {
+  padding-top: var(--spacing);
+}
+
 /* Default styling for all tags in <body> */
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   text-align: center;
   padding: 20px;
+  padding-top: 200px; /* to avoid header covering body content */
 
   /* 16px = min. for body text's accessibility */
   font-size: 18px;
   line-height: 1.6;
 }
 
+/* Alignment style of all elements: text all types of contents */
+.content-alignment {
+  /* text-align: justify; */
+  /* max-width: 71.3%; */
+  /* margin: 0 auto; */
+  /* padding-top: 100px; */
+}
+
 /* Specifies font-seize and Weight: default values not inherited */
 h1 {
-  font-size: 30px;
+  font-size: 2.3em;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 2em;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 1.8em;
+  font-weight: 600;
 }
 
 /* Interactive Elements and Hover States */
@@ -56,17 +75,17 @@ a:visited {
   color: #b24d00;
 }
 
-/* default underlining of hypertext disappears when hovering over links w/ mouse or when targeted w/ a keyboard (ACCESSIBILITY)
- By default 'cursor: pointer; (cusor will appear has hand when hovering over) */
-a:hover,
-a:focus {
-  text-decoration: none;
-}
-
 /* changes colour of selected link */
 a:active {
-  color: #ff8b32;
+  color: #ff4800;
 }
+
+/* default underlining of hypertext disappears when hovering over links w/ mouse or when targeted w/ a keyboard (ACCESSIBILITY)
+ By default 'cursor: pointer; (cusor will appear has hand when hovering over) */
+ a:hover,
+ a:focus {
+   text-decoration: none;
+ }
 
 /* feedback to user: knows from nav bar that the non-underlined item =currently visited page */
 .navigation-list__item--active {
@@ -77,26 +96,14 @@ a:active {
 button {
   /* styles btn background colour */
   background-color: #ff6e00;
-
   /* styles font colour */
   color: #fff;
-
-  /* takes the font from the parent container */
-
-  /* font-family: inherit; */
   font-size: 16px;
   /* adds spacing to the btn */
   padding: 10px;
-
-  /* overwrites browser defaults and resets the border */
   border: none;
-
-  /* rounds up the angles of btn border */
   border-radius: 10px;
-
-  /* gives btn a bottom border w/ a 2px width, a type of solid, and color */
-  border-bottom: 3px solid #b24d00;
-  display: inline-block;
+  /* display: inline-block; */
 
   /* shorthand: transition btw default and hover/focus states */
   -webkit-transition: opacity 0.2s;
@@ -109,30 +116,16 @@ button {
 }
 
 .button {
-  /* styles btn background colour */
-  background-color: #ff6e00;
-
+  background-color: #ff5e00;
   /* styles font colour */
   color: #fff;
-
-  /* takes the font from the parent container */
-
-  /* font-family: inherit; */
   font-size: 16px;
-
   /* adds spacing to the btn */
   padding: 10px;
-
   /* margin adds spacing around the btn and other elements */
   /* margin: 10px; */
-
-  /* overwrites browser defaults and resets the border */
   border: none;
-
-  /* rounds up the angles of btn border */
   border-radius: 10px;
-
-  /* gives btn a bottom border w/ a 2px width, a type of solid, and color */
   border-bottom: 3px solid #b24d00;
   /* display: inline-block; */
 
@@ -154,44 +147,47 @@ button:focus,
 .button:hover,
 .button:focus {
   cursor: pointer;
-  opacity: 0.9;
+  color: blue;
+  background-color: #00ffdd;
 }
 
-/* places the img on the left of the page with text on its right side */
-.profile__portrait {
-  float: left;
-  width: 250px;
-  margin-right: 40px;
-  border-radius: 50%;
+.button__secondary {
+  background-color: #00ffdd;
+  color: #ffff;
 }
 
-/* prevents footer to be affeted by floated image, remains below instead of next to it */
-.page-footer {
-  clear: both;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  text-align: center;
+button__secondary:hover,
+button__secondary:focus,
+.button__secondary:hover,
+.button__secondary:focus {
+  cursor: pointer;
+  color: blue;
+  background-color: #ff5e00;
 }
 
-#medium-logo {
-  width: 30px;
-  height: 30px;
+.text-layout {
+  /* padding-top: 10%; */
+  text-align: justify;
+  max-width: 71.3%;
+  margin: 0 auto;
 }
 
-#icon-credits {
-  font-size: 14px;
+.container-padding {
+padding-top: 150px;
 }
 
+/*********************************************************** NAVIGATION BAR ***************************************/
+/******************************* Navigation bar & logo *****************/
 .profile {
   max-width: 1000px;
   margin: 0 auto;
   text-align: left;
 }
+/* OR */
+/* .profile {
+  max-width: 700px;
+  margin: 0 auto;
+} */
 
 * {
   -webkit-box-sizing: border-box;
@@ -205,6 +201,12 @@ button:focus,
   display: flex;
   width: 100%;
   padding: 20px;
+  position: fixed; /* Fixes the header at the top */
+  background-color: #fff;
+  top: 0; /* Position at the top */
+  left: 0;
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for better visibility */
 }
 
 /* no growing, ability to shrink, base width 200px */
@@ -221,10 +223,10 @@ button:focus,
 
 /* nav bar: rest of width spacce, right aligned */
 .page-header__item:last-child {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   flex-grow: 1;
-  text-align: right;
 }
 
 /* bullet points of unordered list styling */
@@ -236,6 +238,334 @@ button:focus,
 .navigation-list li {
   display: inline-block;
   margin-left: 15px;
+}
+
+/********************************** Hamburger menu ********************/
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ff6d54;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .navigation-list {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px; /* Adjust based on your header height */
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 10px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navigation-list.active {
+      display: flex;
+    }
+
+    .navigation-list li {
+      /* display: block; */
+      /* margin: 10px 0; */
+      text-align: center;
+    }
+
+    .navigation-list a {
+      color: #333;
+    }
+  }
+
+  /************************************* Animation nav bar w/circles behind ***************/
+div.container a {
+  color: #ff6e00;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 10px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
+
+div.circleBehind a:before {
+  position: absolute;
+  top: 19px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #00ffdd;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  transform: translateX(-50%) translateY(-50%) scale(0.8);
+  border-radius: 50%;
+  background: transparent;
+  content: "";
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.circleBehind a:after {
+  position: absolute;
+  top: 19px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #00ffdd;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  transform: translateX(-50%) translateY(-50%) scale(0.8);
+  border-radius: 50%;
+  background: transparent;
+  content: "";
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+div.circleBehind a:after {
+  border-width: 2px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+div.circleBehind a:hover:before {
+  opacity: 1;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(1);
+  transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+div.circleBehind a:hover:after {
+  opacity: 1;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1.3);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(1.3);
+  transform: translateX(-50%) translateY(-50%) scale(1.3);
+}
+
+/***************************************************************************** HOME SECTION ***********************************************/
+.home-section {
+  max-width: 71.3%;
+  margin: 0 auto;
+}
+
+/* places the img on the left of the page with text on its right side */
+.profile__portrait {
+  float: left;
+  width: 250px;
+  margin-right: 10%;
+  border-radius: 50%;
+}
+
+#about-picture {
+  width: 50%;
+}
+
+.profile-item-right {
+  display: inline-block;
+}
+
+.greeting-msg {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin-top: 0;
+  text-align: left;
+}
+
+@media (min-width: 786px) {
+  .greeting-msg {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 909px) {
+  .greeting-msg {
+    font-size: 1.30em;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 980px) {
+  .greeting-msg {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 1077px) {
+  .greeting-msg {
+    font-size: 1.75em;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 1225px) {
+  .greeting-msg {
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 1280px) {
+  .greeting-msg {
+    font-size: 2.3em;
+    line-height: 1.5em;
+  }
+}
+
+.buttons-home {
+  padding: auto 50%;
+}
+
+.home-msg {
+  padding-top: 100px;
+}
+
+/************************* SKILLS BAR ****************/
+.skills-bar {
+  padding-bottom: 5%;
+  padding-top: 5%;
+  text-align: center;
+  width: 100%;
+  /* padding-top: 100px; */
+}
+
+.skills-bar img {
+  height: 50px;
+  margin-right: 5px;
+}
+
+/************************* SKILLS TABLE ****************/
+/* .skills-table {
+  display: inline-block;
+  clear: both;
+} */
+
+#tools-cards {
+  /* width: auto;
+  display: grid;
+  grid-gap: var(--spacing_s);
+  --auto-grid-min-size: 300px;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  justify-items: center; */
+  /* grid-auto-rows: 1fr; /* this makes all boxes equal height, */
+  /* grid-auto-flow: row; */
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.tools-cards_cards-container {
+  text-align: center;
+}
+
+.tools-cards_col {
+  margin: var(--spacing_s);
+  padding: var(--spacing_s);
+  max-width: 300px;
+  border: 1px solid var(--primary-color);
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.34);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.34);
+}
+@media all and (max-width: 660px) {
+  .tools-cards_col {
+    max-width: 100%;
+    width: 100%;
+    margin: 5px;
+  }
+}
+
+#tools-cards h4 {
+  margin: var(--spacing_s);
+  text-align: center;
+  margin-top: 0;
+}
+
+.tech-card {
+  background-color: #00ffdd;
+  color: white;
+  border-radius: 5px;
+  padding: 2px 5px;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 2;
+  font-weight: bolder;
+}
+
+/*********************************************************************** ABOUT SECTION  **************************************************/
+
+#about-page {
+  margin-top: 10%;
+}
+
+/*********************************************************************** WORK SECTION  **************************************************/
+#work-page {
+  margin-top: 10%;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* Optional: Adds space between the flex items */
+}
+
+.flex-item {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.34);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.34);
+  text-align: center;
+  padding-bottom: 20px;
+  margin: 20px;
+  font-size: 20px;
+  flex: 1 1 calc(50% - 60px);
+  /* Adjusts the width to 2 columns with gaps */
+  box-sizing: border-box;
+  /* Ensures padding and border are included in the width calculation */
+}
+
+.tech-cards-container {
+  padding: 2% 5%;
+}
+
+.project-description {
+  text-align: justify;
+  padding: 0 5%;
 }
 
 .project-grid {
@@ -348,96 +678,54 @@ h2.card-title {
   }
 }
 
-.project-links {
+  .project-links {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 106, 0);
+    padding: 10px;
+    margin: 0 5px; /* Adds space between the links */
+}
+.project-links:hover {
+  color: blue;
+}
+
+.case-study-container {
+  padding-top: 90px;
+}
+.img-case-study {
   display: flex;
-  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
 
-.skills-table {
-  display: inline-block;
+.case-study__screenshot {
+  height: calc(100vh - 101.6px); /* Subtract the height of the navbar */
+  width: 100%; /* Maintain aspect ratio */
+  max-width: 100%; /* Prevents the image from being wider than the container */
+}
+
+/**************************************************************************** CONTACT SECTION ***************/
+#contact-page {
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+/**************************************************************************** FOOTER *********************************/
+/* prevents footer to be affeted by floated image, remains below instead of next to it */
+.page-footer {
   clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
 }
 
-#about-picture {
-  width: 50%;
-}
-
-.about-text {
-  text-align: justify;
-  max-width: 71.3%;
-  margin: 0 auto;
-  padding-top: 100px;
-}
-
-/* Animation nav bar w/circles behind */
-div.container a {
-  color: #ff6e00;
-  text-decoration: none;
-  margin: 0 10px;
-  padding: 10px;
-  position: relative;
-  z-index: 0;
-  cursor: pointer;
-}
-
-div.circleBehind a:before {
-  position: absolute;
-  top: 19px;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  border: 4px solid #73fffa;
-  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
-  -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
-  transform: translateX(-50%) translateY(-50%) scale(0.8);
-  border-radius: 50%;
-  background: transparent;
-  content: "";
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  z-index: -1;
-}
-
-.circleBehind a:after {
-  position: absolute;
-  top: 19px;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  border: 4px solid #03f7fb
-  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
-  -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
-  transform: translateX(-50%) translateY(-50%) scale(0.8);
-  border-radius: 50%;
-  background: transparent;
-  content: "";
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  z-index: -1;
-}
-
-div.circleBehind a:after {
-  border-width: 2px;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-div.circleBehind a:hover:before {
-  opacity: 1;
-  -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
-  -ms-transform: translateX(-50%) translateY(-50%) scale(1);
-  transform: translateX(-50%) translateY(-50%) scale(1);
-}
-
-div.circleBehind a:hover:after {
-  opacity: 1;
-  -webkit-transform: translateX(-50%) translateY(-50%) scale(1.3);
-  -ms-transform: translateX(-50%) translateY(-50%) scale(1.3);
-  transform: translateX(-50%) translateY(-50%) scale(1.3);
+#medium-logo {
+  width: 30px;
+  height: 30px;
 }
