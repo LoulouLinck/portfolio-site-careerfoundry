@@ -128,7 +128,7 @@ button {
   margin-bottom: 10px;
   border: none;
   border-radius: 10px;
-  border-bottom: 3px solid #b24d00;
+  /* border-bottom: 3px solid #b24d00; */
   /* display: inline-block; */
 
   /* shorthand: transition btw default and hover/focus states */
@@ -204,7 +204,7 @@ padding-top: 150px;
   width: 100%;
   padding: 20px;
   position: fixed; /* Fixes the header at the top */
-  background-color: #fff;
+  background-color: #e0fffc;
   top: 0; /* Position at the top */
   left: 0;
   z-index: 1000; /* Ensure it stays on top of other elements */
@@ -761,6 +761,7 @@ h2.card-title {
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
+  background-color: #e0fffc;
 }
 
 #medium-logo {
