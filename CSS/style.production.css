@@ -722,7 +722,6 @@ h2.card-title {
 
 .contact-grid-item {
   text-align: justify;
-  padding-bottom: 20px;
   margin: 20px;
   font-size: 20px;
   flex: 1 1 calc(50% - 50px);
