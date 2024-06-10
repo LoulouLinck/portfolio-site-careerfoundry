@@ -28,8 +28,9 @@ body {
   font-weight: 400;
   text-align: center;
   padding: 20px;
-  /* to avoid header covering body content */
   /* padding-top: 200px;  */
+  /* to avoid header covering body content */
+
   /* 16px = min. for body text's accessibility */
   font-size: 18px;
   line-height: 1.6;
@@ -363,7 +364,7 @@ div.circleBehind a:hover:after {
 .home-page {
   max-width: 71.3%;
   margin: 0 auto;
-  padding-top: 200px
+  padding-top: 200px;
 }
 
 /* places the img on the left of the page with text on its right side */
@@ -529,12 +530,12 @@ div.circleBehind a:hover:after {
 /*********************************************************************** ABOUT SECTION  **************************************************/
 
 #about-page {
-  margin-top: -200px;
+  padding-top: 200px;
 }
 
 /*********************************************************************** WORK SECTION  **************************************************/
 #work-page {
-  margin-top: -200px;
+  padding-top: 200px;
 }
 
 .flex-container {
@@ -708,7 +709,7 @@ h2.card-title {
 
 /**************************************************************************** CONTACT SECTION ***************/
 #contact-page {
-  margin-top: -200px;
+  padding-top: 200px;
   margin-bottom: 5%;
 }
 
