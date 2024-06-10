@@ -371,6 +371,7 @@ div.circleBehind a:hover:after {
   float: left;
   width: 250px;
   margin-right: 10%;
+  margin-bottom: 10%;
   border-radius: 50%;
 }
 
