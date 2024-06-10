@@ -557,6 +557,7 @@ div.circleBehind a:hover:after {
   font-size: 20px;
   flex: 1 1 calc(50% - 60px);
   /* Adjusts the width to 2 columns with gaps */
+  min-width: 415px;
   box-sizing: border-box;
   /* Ensures padding and border are included in the width calculation */
 }
