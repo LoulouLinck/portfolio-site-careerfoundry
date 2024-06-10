@@ -125,6 +125,7 @@ button {
   padding: 10px;
   /* margin adds spacing around the btn and other elements */
   margin-right: 10px;
+  margin-bottom: 10px;
   border: none;
   border-radius: 10px;
   border-bottom: 3px solid #b24d00;
