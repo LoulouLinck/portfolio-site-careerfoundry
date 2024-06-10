@@ -27,9 +27,6 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   text-align: center;
-  padding: 20px;
-  /* padding-top: 200px;  */
-  /* to avoid header covering body content */
 
   /* 16px = min. for body text's accessibility */
   font-size: 18px;
