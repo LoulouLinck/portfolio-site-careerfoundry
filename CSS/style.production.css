@@ -745,6 +745,9 @@ h2.card-title {
   margin-bottom: 5px;
 }
 
+.standard-label {
+  font-weight: 700;
+}
 /**************************************************************************** FOOTER *********************************/
 /* prevents footer to be affeted by floated image, remains below instead of next to it */
 .page-footer {
