@@ -22,6 +22,12 @@ Make sure you keep a copy of your original “styles.css” file. If you want to
   padding-top: var(--spacing);
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 /* Default styling for all tags in <body> */
 body {
   font-family: 'Poppins', sans-serif;
