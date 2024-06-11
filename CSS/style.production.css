@@ -22,6 +22,7 @@ Make sure you keep a copy of your original “styles.css” file. If you want to
   padding-top: var(--spacing);
 }
 
+/* reset to ensure consistent baseline on all browsers */
 body, html {
   margin: 0;
   padding: 0;
@@ -40,6 +41,7 @@ body {
   line-height: 1.6;
 }
 
+/* reset to ensure consistent baseline on all browsers */
 * {
   box-sizing: border-box;
 }
