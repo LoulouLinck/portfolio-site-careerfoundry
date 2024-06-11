@@ -33,6 +33,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   text-align: center;
+  margin: 20px;
 
   /* 16px = min. for body text's accessibility */
   font-size: 18px;
