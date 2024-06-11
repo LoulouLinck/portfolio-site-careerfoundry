@@ -39,6 +39,10 @@ body {
   line-height: 1.6;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* Alignment style of all elements: text all types of contents */
 .content-alignment {
   /* text-align: justify; */
