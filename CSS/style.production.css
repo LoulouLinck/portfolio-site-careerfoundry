@@ -23,7 +23,13 @@ Make sure you keep a copy of your original “styles.css” file. If you want to
 }
 
 /* reset to ensure consistent baseline on all browsers */
-body, html {
+* {
+  box-sizing: border-box;
+}
+
+/* reset to ensure consistent baseline on all browsers */
+body, 
+html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -35,24 +41,9 @@ body {
   font-weight: 400;
   text-align: center;
   margin: 20px;
-
-  /* 16px = min. for body text's accessibility */
-  font-size: 18px;
+  font-size: 18px; /* 16px = min. for body text's accessibility */
   line-height: 1.6;
 }
-
-/* reset to ensure consistent baseline on all browsers */
-* {
-  box-sizing: border-box;
-}
-
-/* Alignment style of all elements: text all types of contents */
-/* .content-alignment { */
-  /* text-align: justify; */
-  /* max-width: 71.3%; */
-  /* margin: 0 auto; */
-  /* padding-top: 100px; */
-/* } */
 
 /* Specifies font-seize and Weight: default values not inherited */
 h1 {
@@ -80,15 +71,12 @@ a {
 }
 
 /* Pseudo-classes for <a> */
-
-/* changes colour if ever visited before */
 a:visited {
-  color: #b24d00;
+  color: #b24d00; /* changes colour if ever visited before */
 }
 
-/* changes colour of selected link */
 a:active {
-  color: #ff4800;
+  color: #ff4800; /* changes colour of selected link */
 }
 
 /* default underlining of hypertext disappears when hovering over links w/ mouse or when targeted w/ a keyboard (ACCESSIBILITY)
@@ -128,18 +116,13 @@ button {
 
 .button {
   background-color: #ff5e00;
-  /* styles font colour */
   color: #fff;
   font-size: 20px;
-  /* adds spacing to the btn */
   padding: 10px;
-  /* margin adds spacing around the btn and other elements */
   margin-right: 10px;
   margin-bottom: 10px;
   border: none;
   border-radius: 10px;
-  /* border-bottom: 3px solid #b24d00; */
-  /* display: inline-block; */
 
   /* shorthand: transition btw default and hover/focus states */
   -webkit-transition: opacity 0.2s;
@@ -178,7 +161,6 @@ button__secondary:focus,
 }
 
 .text-layout {
-  /* padding-top: 10%; */
   text-align: justify;
   max-width: 71.3%;
   margin: 0 auto;
@@ -195,11 +177,6 @@ padding-top: 150px;
   margin: 0 auto;
   text-align: left;
 }
-/* OR */
-/* .profile {
-  max-width: 700px;
-  margin: 0 auto;
-} */
 
 * {
   -webkit-box-sizing: border-box;
@@ -460,8 +437,7 @@ div.circleBehind a:hover:after {
   width: auto;
   margin-left: 4px;
   text-align: center;
-  /* poperties for svg color: white */
-  filter: invert(100%) sepia(5%) saturate(0%) hue-rotate(74deg) brightness(112%) contrast(101%);
+  filter: invert(100%) sepia(5%) saturate(0%) hue-rotate(74deg) brightness(112%) contrast(101%);   /* poperties for svg color: white */
 }
 
 .home-msg {
@@ -474,7 +450,6 @@ div.circleBehind a:hover:after {
   padding-top: 5%;
   text-align: center;
   width: 100%;
-  /* padding-top: 100px; */
 }
 
 .skills-bar img {
@@ -569,8 +544,7 @@ div.circleBehind a:hover:after {
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  /* Optional: Adds space between the flex items */
+  gap: 10px; /* Optional: Adds space between the flex items */
 }
 
 .flex-item {
@@ -583,9 +557,10 @@ div.circleBehind a:hover:after {
   padding-bottom: 20px;
   margin: 20px;
   font-size: 20px;
-  flex: 1 1 calc(50% - 60px);
-  /* Adjusts the width to 2 columns with gaps */
+  flex: 1 1 calc(50% - 60px);  /* Adjusts the width to 2 columns with gaps */
   min-width: 415px;
+  /* max-width: 45%;
+  min-width: 300px; */
   box-sizing: border-box;
   /* Ensures padding and border are included in the width calculation */
 }
@@ -605,25 +580,12 @@ div.circleBehind a:hover:after {
   object-fit: cover;
 }
 
-h2.card-title {
-  text-align: center;
-}
-
-.project-text {
-  text-align: left;
-}
-
-.card-body {
-  text-align: left;
-}
-
-
 /* Grid fallback */
-.project-grid__item {
+/* .project-grid__item {
   display: inline-block;
   width: 33%;
   text-align: left;
-}
+} */
 
 
 /* feature detection for browsers reccognising grid */
@@ -717,6 +679,7 @@ h2.card-title {
 .case-study-container {
   padding-top: 90px;
 }
+
 .img-case-study {
   display: flex;
   flex-wrap: wrap;
