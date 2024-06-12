@@ -350,7 +350,7 @@ div.circleBehind a:hover:after {
 
 /***************************************************************************** HOME SECTION ***********************************************/
 #home-page {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding-top: 200px;
 }
 
