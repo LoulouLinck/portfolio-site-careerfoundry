@@ -580,13 +580,40 @@ div.circleBehind a:hover:after {
   object-fit: cover;
 }
 
+.project-links {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(255, 106, 0);
+  padding: 10px;
+  margin: 0 5px; /* Adds space between the links */
+}
+.project-links:hover {
+color: blue;
+}
+
+.case-study-container {
+padding-top: 90px;
+}
+
+.img-case-study {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+
+.case-study__screenshot {
+height: calc(100vh - 101.6px); /* Subtract the height of the navbar */
+width: 100%; /* Maintain aspect ratio */
+max-width: 100%; /* Prevents the image from being wider than the container */
+}
+
 /* Grid fallback */
 /* .project-grid__item {
   display: inline-block;
   width: 33%;
   text-align: left;
 } */
-
 
 /* feature detection for browsers reccognising grid */
 /* @supports (display: grid) {
@@ -635,6 +662,14 @@ div.circleBehind a:hover:after {
 /* } */
 /* } */
 
+/* work project */
+/* .project-grid {
+  display: flex; */
+/* grid-template-columns: 1fr 1fr 1fr; */
+/* grid-gap: 10px;
+  flex-wrap: wrap;
+} */
+
 /* responsive classes for different devices */
 /* @media all and (max-width: 501px) {
   .project-grid {
@@ -665,34 +700,6 @@ div.circleBehind a:hover:after {
   }
 } */
 
-  .project-links {
-    display: inline-block;
-    text-decoration: none;
-    color: rgb(255, 106, 0);
-    padding: 10px;
-    margin: 0 5px; /* Adds space between the links */
-}
-.project-links:hover {
-  color: blue;
-}
-
-.case-study-container {
-  padding-top: 90px;
-}
-
-.img-case-study {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.case-study__screenshot {
-  height: calc(100vh - 101.6px); /* Subtract the height of the navbar */
-  width: 100%; /* Maintain aspect ratio */
-  max-width: 100%; /* Prevents the image from being wider than the container */
-}
-
 /**************************************************************************** CONTACT SECTION ***************/
 #contact-page {
   padding-top: 200px;
@@ -709,8 +716,7 @@ div.circleBehind a:hover:after {
   text-align: justify;
   margin: 20px;
   font-size: 20px;
-  flex: 1 1 calc(50% - 50px);
-  /* Adjusts the width to 2 columns with gaps */
+  flex: 1 1 calc(50% - 50px); /* Adjusts the width to 2 columns with gaps */
   box-sizing: border-box;
   /* Ensures padding and border are included in the width calculation */
 }
@@ -733,6 +739,7 @@ div.circleBehind a:hover:after {
 .standard-label {
   font-weight: 700;
 }
+
 /**************************************************************************** FOOTER *********************************/
 /* prevents footer to be affeted by floated image, remains below instead of next to it */
 .page-footer {
