@@ -40,8 +40,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   text-align: center;
-  /* margin: 20px; */
-  font-size: 18px;   /* 16px = min. for body text's accessibility */
+  font-size: 18px; /* 16px = min. for body text's accessibility */
   line-height: 1.6;
 }
 
@@ -65,18 +64,20 @@ h3 {
 
 /* default colour of all links */
 a {
-  color: #ff6e00;
+  color: #ff5e00;
   font-size: 20px;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 /* Pseudo-classes for <a> */
 a:visited {
-  color: #b24d00; /* changes colour if ever visited before */
+  color: #ff2600;
+  /* changes colour if ever visited before */
 }
 
 a:active {
-  color: #ff4800; /* changes colour of selected link */
+  color: #0432ff;
+  /* changes colour of selected link */
 }
 
 /* default underlining of hypertext disappears when hovering over links w/ mouse or when targeted w/ a keyboard (ACCESSIBILITY)
@@ -87,19 +88,22 @@ a:focus {
 }
 
 /* feedback to user: knows from nav bar that the non-underlined item =currently visited page */
-.navigation-list__item--active {
+/* .navigation-list__item--active {
   text-decoration: none;
-}
+} */
 
 /* btn styling */
-button {
+button,
+.button {
   /* styles btn background colour */
-  background-color: #ff6e00;
+  background-color: #ff5e00;
   /* styles font colour */
   color: #fff;
   font-size: 20px;
   /* adds spacing to the btn */
   padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
   border: none;
   border-radius: 10px;
   /* display: inline-block; */
@@ -113,35 +117,11 @@ button {
   /* transition-duration: 0.2s;
   transition-property: opacity; */
 }
-
-.button {
-  background-color: #ff5e00;
-  color: #fff;
-  font-size: 20px;
-  padding: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 10px;
-
-  /* shorthand: transition btw default and hover/focus states */
-  -webkit-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-
-  /* longhand */
-
-  /* transition-duration: 0.2s;
-  transition-property: opacity; */
-}
-
-/* mouse appear as a hand when hovering over btn
-   reduces opacity of the btn to 80% */
 button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-  cursor: pointer;
+  cursor: pointer; /* mouse appears as a hand when hovering */
   color: blue;
   background-color: #00ffdd;
 }
@@ -239,7 +219,7 @@ button__secondary:focus,
 .menu-icon .bar {
   width: 25px;
   height: 3px;
-  background-color: #ff6d54;
+  background-color: #ff5e00;
   margin: 4px 0;
   transition: 0.4s;
 }
@@ -266,8 +246,8 @@ button__secondary:focus,
   }
 
   .navigation-list li {
-    /* display: block; */
-    /* margin: 10px 0; */
+    display: block;
+    margin: 10px 0;
     text-align: center;
   }
 
@@ -278,7 +258,7 @@ button__secondary:focus,
 
 /************************** Animation nav bar ******/
 div.container a {
-  color: #ff6d54;
+  color: #ff5e00;
   text-decoration: none;
   margin: 0 10px;
   padding: 10px;
@@ -429,7 +409,8 @@ div.circleBehind a:hover:after {
 
 .button img,
 .button span {
-  vertical-align: middle;   /* Ensure vertical alignment */
+  vertical-align: middle;
+  /* Ensure vertical alignment */
 }
 
 #download-CV {
@@ -437,7 +418,7 @@ div.circleBehind a:hover:after {
   width: auto;
   margin-left: 4px;
   text-align: center;
-  filter: invert(100%) sepia(5%) saturate(0%) hue-rotate(74deg) brightness(112%) contrast(101%);   /* poperties for svg color: white */
+  filter: invert(100%) sepia(5%) saturate(0%) hue-rotate(74deg) brightness(112%) contrast(101%); /* poperties for svg color: white */
 }
 
 .home-msg {
@@ -544,7 +525,7 @@ div.circleBehind a:hover:after {
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;   /* Optional: Adds space between the flex items */
+  gap: 10px; /* Optional: Adds space between the flex items */
 }
 
 .flex-item {
@@ -561,8 +542,7 @@ div.circleBehind a:hover:after {
   /* min-width: 415px; */
   /* max-width: 45%;
   min-width: 300px; */
-  box-sizing: border-box;
-  /* Ensures padding and border are included in the width calculation */
+  box-sizing: border-box; /* Ensures padding and border are included in the width calculation */
 }
 
 .tech-cards-container {
@@ -587,6 +567,7 @@ div.circleBehind a:hover:after {
   padding: 10px;
   margin: 0 5px; /* Adds space between the links */
 }
+
 .project-links:hover {
   color: blue;
 }
@@ -717,8 +698,7 @@ div.circleBehind a:hover:after {
   margin: 20px;
   font-size: 20px;
   flex: 1 1 calc(50% - 50px); /* Adjusts the width to 2 columns with gaps */
-  box-sizing: border-box;
-  /* Ensures padding and border are included in the width calculation */
+  box-sizing: border-box; /* Ensures padding and border are included in the width calculation */
 }
 
 #User-name,
@@ -758,6 +738,10 @@ div.circleBehind a:hover:after {
 #medium-logo {
   width: 30px;
   height: 30px;
+}
+
+.social-media a {
+  text-decoration: none; 
 }
 
 .impressum {
