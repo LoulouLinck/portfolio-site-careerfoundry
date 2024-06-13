@@ -171,7 +171,7 @@ button__secondary:focus,
   width: 100%;
   padding: 20px;
   position: fixed; /* Fixes the header at the top */
-  background-color: #e0fffc;
+  background-color: #fff;
   top: 0; /* Position at the top */
   left: 0;
   z-index: 1000; /* Ensure it stays on top of other elements */
@@ -428,7 +428,8 @@ div.circleBehind a:hover:after {
 }
 
 .home-msg {
-  padding-top: 100px;
+  /* padding-top: 100px; */
+  clear: right; /* prevents txt to wrap img, pushes txt down */
 }
 
 /************************* SKILLS BAR ****************/
