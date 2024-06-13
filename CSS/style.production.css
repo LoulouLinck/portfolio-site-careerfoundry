@@ -174,7 +174,7 @@ button__secondary:focus,
   background-color: #e0fffc;
   top: 0; /* Position at the top */
   left: 0;
-  z-index: 1000;  /* Ensure it stays on top of other elements */
+  z-index: 1000; /* Ensure it stays on top of other elements */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visibility */
 }
 
@@ -331,13 +331,20 @@ div.circleBehind a:hover:after {
 /***************************************************************************** HOME SECTION ***********************************************/
 #home-page {
   /* margin: 0 auto; */
-  padding-top: 200px;
+  padding-top: 180px;
+}
+
+.hero-container {
+  margin: 0px auto;
+  max-width: 1536px;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 /* places the img on the left of the page with text on its right side */
 .profile__portrait {
-  float: left;
-  width: 250px;
+  float: right;
+  width: 277px;
   margin-right: 10%;
   margin-bottom: 10%;
   border-radius: 50%;
@@ -395,16 +402,15 @@ div.circleBehind a:hover:after {
 
 @media (min-width: 1280px) {
   .greeting-msg {
-    font-size: 2.3em;
-    line-height: 1.5em;
+    font-size: 3rem;
+    line-height: 1.4em;
   }
 }
 
 .buttons-home {
   /* Ensure vertical alignment of elements in button */
-  display: inline-flex;
-  align-items: center;
-  padding: auto 50%;
+  display: block;
+  text-align: left;
 }
 
 .button img,
@@ -428,7 +434,7 @@ div.circleBehind a:hover:after {
 /************************* SKILLS BAR ****************/
 .skills-bar {
   padding-bottom: 5%;
-  padding-top: 5%;
+  padding-top: 8%;
   text-align: center;
   width: 100%;
 }
@@ -537,8 +543,8 @@ div.circleBehind a:hover:after {
   text-align: center;
   padding-bottom: 20px;
   margin: 20px;
-  font-size: 20px;
-  flex: 1 1 calc(50% - 60px);   /* Adjusts the width to 2 columns with gaps */
+  font-size: 18px;
+  flex: 1 1 calc(50% - 60px); /* Adjusts the width to 2 columns with gaps */
   /* min-width: 415px; */
   /* max-width: 45%;
   min-width: 300px; */
@@ -706,7 +712,7 @@ div.circleBehind a:hover:after {
 #User-msg {
   width: 100%;
   border-style: none;
-  background-color: #47ffea2b;
+  background-color: #17cbb336;
   padding: 0.5rem;
   margin: 15px auto 30px;
 }
@@ -732,7 +738,7 @@ div.circleBehind a:hover:after {
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
-  background-color: #e0fffc;
+  background-color: #12d2b936;
 }
 
 #medium-logo {
