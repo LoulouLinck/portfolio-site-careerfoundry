@@ -163,7 +163,8 @@ button__secondary:focus,
   box-sizing: border-box;
 }
 
-/* header (logo+nab bar) covers full width of page */
+/***************** HEADER (logo + nab bar = page full width *********************************************/
+/* Flexbox: designs 1-dimensional layout, all content elements arranged in single row */
 .page-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -178,16 +179,16 @@ button__secondary:focus,
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visibility */
 }
 
-/* no growing, ability to shrink, base width 200px */
+/* no growing, ability to shrink, base width 70px */
 .page-header__item {
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 200px;
-  flex: 0 1 200px;
+  -ms-flex: 0 1 70px;
+  flex: 0 1 70px; /* referes to: flex-grow, flex-shrink, flex-basis */
 }
 
 .logo {
-  width: 200px;
   height: 70px;
+  margin-left: 20px;
 }
 
 /* nav bar: rest of width space, right aligned */
@@ -341,7 +342,7 @@ div.circleBehind a:hover:after {
   padding-right: 2.5rem;
 }
 
-/* places the img on the left of the page with text on its right side */
+/* places img on page's left w/ text on its right side */
 .profile__portrait {
   float: right;
   width: 277px;
@@ -452,15 +453,6 @@ div.circleBehind a:hover:after {
 } */
 
 #tools-cards {
-  /* width: auto;
-  display: grid;
-  grid-gap: var(--spacing_s);
-  --auto-grid-min-size: 300px;
-  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-  justify-items: center; */
-  /* grid-auto-rows: 1fr; /* this makes all boxes equal height, */
-  /* grid-auto-flow: row; */
-
   display: -webkit-box;
 
   display: -ms-flexbox;
@@ -529,13 +521,23 @@ div.circleBehind a:hover:after {
   padding-top: 125px;
 }
 
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px; /* Optional: Adds space between the flex items */
+/* start grid fallback */
+.grid__item {
+ display: inline-block;
+ width: 50%;
+}
+/* end grid fallback */
+
+/* CSS Grid: designs 2-dimensional layouts w/ rows & columns */
+@supports (display: grid) {
+.grid__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin: 20px;
 }
 
-.flex-item {
+.grid__item {
   background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 20px;
@@ -545,12 +547,19 @@ div.circleBehind a:hover:after {
   padding-bottom: 20px;
   margin: 20px;
   font-size: 18px;
-  flex: 1 1 calc(50% - 60px); /* Adjusts the width to 2 columns with gaps */
-  /* min-width: 415px; */
-  /* max-width: 45%;
-  min-width: 300px; */
-  box-sizing: border-box; /* Ensures padding and border are included in the width calculation */
+
+   width: auto;
+   min-height: auto;
 }
+
+  /* Media query to form one column when the minimum width is reached */
+@media (max-width: calc(333px * 2 + 100px)) {
+    .grid__container {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
 
 .tech-cards-container {
   padding: 2% 5%;
@@ -592,7 +601,7 @@ div.circleBehind a:hover:after {
 
 .case-study__screenshot {
   height: calc(100vh - 101.6px); /* Subtract the height of the navbar */
-  width: 100%; /* Maintain aspect ratio */
+  width: 100vw;
   max-width: 100%; /* Prevents the image from being wider than the container */
 }
 
@@ -704,7 +713,7 @@ div.circleBehind a:hover:after {
   text-align: justify;
   margin: 20px;
   font-size: 20px;
-  flex: 1 1 calc(50% - 50px); /* Adjusts the width to 2 columns with gaps */
+  flex: 1 1 calc(50% - 50px); /* flex-grow, flex-shrink, flex-basis (Adjusts the width to 2 columns with gaps) */
   box-sizing: border-box; /* Ensures padding and border are included in the width calculation */
 }
 
@@ -728,16 +737,16 @@ div.circleBehind a:hover:after {
 }
 
 /********************************************************************************************* FOOTER *********************************/
-/* prevents footer to be affeted by floated image, remains below instead of next to it */
+/* Flexbox: designs 1-dimensional layout, all content elements arranged in single row  */
 .page-footer {
-  clear: both;
+  clear: both; /* prevents footer affected by floated image: stays below, not next to it */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
+  flex-direction: column; /* controls flow direction: top-to-bottom */
   text-align: center;
   background-color: #12d2b936;
 }
