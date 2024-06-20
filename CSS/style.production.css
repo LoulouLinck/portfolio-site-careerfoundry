@@ -48,6 +48,7 @@ body {
 h1 {
   font-size: 2.3em;
   font-weight: 700;
+  margin-bottom: 0px;
 }
 
 h2 {
@@ -336,76 +337,46 @@ div.circleBehind a:hover:after {
 }
 
 .hero-container {
-  margin: 0px auto;
+  display: flex; /* Use flexbox */
+  flex-wrap: wrap; /* Wrap elements to multiple lines on smaller screens */
+  /* margin: 0px auto;
   max-width: 1536px;
   padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-right: 2.5rem; */
+}
+
+.profile-item {
+  flex: 1 1 50%; /* Each item takes up 50% of available space */
+  padding: 10px;
 }
 
 /* places img on page's left w/ text on its right side */
 .profile__portrait {
-  float: right;
-  width: 277px;
+  /* float: right;
   margin-right: 10%;
-  margin-bottom: 10%;
-  border-radius: 50%;
+  margin-bottom: 10%; */
+  border-radius: 50%; 
+  width: 277px;
 }
+
+  /* .profile-item-left {
+     text-align: center;
+  }
+} */
 
 #about-picture {
   width: 50%;
 }
 
-.profile-item-right {
+/* .profile-item-right {
   display: inline-block;
 }
-
+ */
 .greeting-msg {
   font-size: 1.2em;
-  line-height: 1.5em;
+  line-height: 1em;
   margin-top: 0;
   text-align: left;
-}
-
-@media (min-width: 786px) {
-  .greeting-msg {
-    font-size: 1.2em;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 909px) {
-  .greeting-msg {
-    font-size: 1.30em;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 980px) {
-  .greeting-msg {
-    font-size: 1.5em;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 1077px) {
-  .greeting-msg {
-    font-size: 1.75em;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 1225px) {
-  .greeting-msg {
-    font-size: 2em;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 1280px) {
-  .greeting-msg {
-    font-size: 3rem;
-    line-height: 1.4em;
-  }
 }
 
 .buttons-home {
@@ -428,10 +399,11 @@ div.circleBehind a:hover:after {
   filter: invert(100%) sepia(5%) saturate(0%) hue-rotate(74deg) brightness(112%) contrast(101%); /* poperties for svg color: white */
 }
 
-.home-msg {
+/* .home-msg { */
   /* padding-top: 100px; */
-  clear: right; /* prevents txt to wrap img, pushes txt down */
-}
+  /* clear: right;  */
+  /* prevents txt to wrap img, pushes txt down */
+/* } */
 
 /************************* SKILLS BAR ****************/
 .skills-bar {
@@ -518,7 +490,7 @@ div.circleBehind a:hover:after {
 
 /**************************************************************** WORK SECTION  **************************************************/
 #work-page {
-  padding-top: 125px;
+  padding-top: 200px;
 }
 
 /* start grid fallback */
@@ -717,6 +689,10 @@ div.circleBehind a:hover:after {
   box-sizing: border-box; /* Ensures padding and border are included in the width calculation */
 }
 
+.contact-info {
+  padding: 20px 0;
+}
+
 #User-name,
 #User-email,
 #User-msg {
@@ -762,4 +738,228 @@ div.circleBehind a:hover:after {
 
 .impressum {
   font-size: 14px;
+}
+
+/****************** WEBKITS  ******************8*/
+
+@media (max-width: 320px) {
+  *, a {
+    font-size: 16px;
+    line-height: 1.2em;
+  };
+  #home-page, #about-page, #contact-page {
+      padding-top: 125px;
+  };
+  .greeting-msg {
+    font-size: 1.2em;
+    text-align: center;
+  };
+  span {
+    font-size: 1em;
+  };
+   #buttons-home {
+    text-align: center;
+  };
+  .button {
+    font-size: 18px;
+    padding: 5px;
+  };
+  .home-msg {
+    padding: 30px 20px 0;
+  };
+  .skills-bar img {
+    height: 33px;
+  };
+  #tools-cards {
+    margin: 0 20px;
+  };
+  .text-layout {
+    margin: 0 20px;
+    max-width: 100%;
+  };
+  .grid__container {
+    margin: 0;
+  };
+  .grid__item {
+      padding-bottom: 5px;
+  };
+  .contact-grid-item {
+    margin: 0;
+    flex: 1 1 calc(100% - 50px);
+};
+  h3 {
+    margin: 10px;
+  };
+}
+
+@media (min-width: 320px) and (max-width: 340px) {
+  .greeting-msg {
+    font-size: 1.4em;
+    text-align: center;
+  };
+  .button {
+    font-size: 18px;
+    padding: 5px;
+  };
+}
+
+@media (min-width: 340px) and (max-width: 480px) {
+  *, a {
+    font-size: 16px;
+    line-height: 1.2em;
+  };
+  #home-page, #about-page, #contact-page {
+      padding-top: 125px;
+  };
+  .greeting-msg {
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 1.2em;
+  };
+  span {
+    font-size: 1em;
+  };
+   #buttons-home {
+    text-align: center;
+     margin: 20px;
+  };
+  .home-msg {
+    padding: 30px 20px 0;
+  };
+  .skills-bar img {
+    height: 33px;
+  };
+  #tools-cards {
+    margin: 0 20px;
+  };
+  .text-layout {
+    margin: 0 20px;
+    max-width: 100%;
+  };
+  .grid__container {
+    margin: 0;
+  };
+  .grid__item {
+      padding-bottom: 5px;
+  };
+  .contact-grid-item {
+    margin: 0;
+    flex: 1 1 calc(100% - 50px);
+  };
+  h3 {
+    margin: 10px;
+  };
+}
+
+
+@media (min-width: 480px) and (max-width: 786px) {
+  /* .greeting-msg {
+    font-size: 1.5em;
+  }; */
+
+  *, a {
+    font-size: 18px;
+    line-height: 1.5em;
+  };
+  #home-page, #about-page, #contact-page {
+      padding-top: 125px;
+  };
+  .hero-container {
+    display: block;
+  };
+  .greeting-msg {
+    font-size: 2em;
+    text-align: center;
+    line-height: 1.5em;
+  };
+  span {
+    font-size: 1em;
+  };
+   #buttons-home {
+    text-align: center;
+  };
+  .home-msg {
+    padding: 30px 20px 0;
+  };
+  .skills-bar img {
+    height: 33px;
+  };
+  #tools-cards {
+    margin: 0 20px;
+  };
+  .text-layout {
+    margin: 0 20px;
+    max-width: 100%;
+  };
+  .grid__container {
+    margin: 0;
+  };
+  .grid__item {
+      padding-bottom: 5px;
+  };
+  .contact-grid-item {
+    margin: 0;
+    flex: 1 1 calc(100% - 50px);
+  };
+  h3 {
+    margin: 10px;
+  };
+}
+
+/* @media (max-width: 768px) { 
+  .profile-item {
+    flex: 1 1 100%;  */
+    /* Each item takes up 100% of available space on smaller screens */
+  /* }
+} */
+
+@media (min-width: 786px) and (max-width: 992px) {
+   #buttons-home {
+    text-align: left;
+  };
+  .profile-item {
+    text-align: center;
+  };
+  .greeting-msg {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  };
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+   #buttons-home {
+    text-align: left;
+  };
+  .profile-item {
+    text-align: center;
+  };
+  .greeting-msg {
+    font-size: 1.8em;
+    line-height: 1.5em;
+  };
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+   #buttons-home {
+    text-align: left;
+  };
+  .profile-item {
+    text-align: center;
+  };
+  .greeting-msg {
+    font-size: 2em;
+    line-height: 1.2em;
+  };
+}
+
+@media (min-width: 1400px) {
+   #buttons-home {
+    text-align: left;
+  };
+  .profile-item {
+    text-align: center;
+  };
+  .greeting-msg {
+    font-size: 2.5em;
+  };
 }
