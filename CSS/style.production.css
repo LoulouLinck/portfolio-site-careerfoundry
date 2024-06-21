@@ -40,15 +40,15 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   text-align: center;
-  margin: 20px;
-  font-size: 18px;   /* 16px = min. for body text's accessibility */
+  font-size: 18px; /* 16px = min. for body text's accessibility */
   line-height: 1.6;
 }
 
 /* Specifies font-seize and Weight: default values not inherited */
 h1 {
-  font-size: 2.3em;
+  font-size: 2.5em;
   font-weight: 700;
+  line-height: 1em;
 }
 
 h2 {
@@ -65,18 +65,20 @@ h3 {
 
 /* default colour of all links */
 a {
-  color: #ff6e00;
+  color: #ff5e00;
   font-size: 20px;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 /* Pseudo-classes for <a> */
 a:visited {
-  color: #b24d00; /* changes colour if ever visited before */
+  color: #ff2600;
+  /* changes colour if ever visited before */
 }
 
 a:active {
-  color: #ff4800; /* changes colour of selected link */
+  color: #0432ff;
+  /* changes colour of selected link */
 }
 
 /* default underlining of hypertext disappears when hovering over links w/ mouse or when targeted w/ a keyboard (ACCESSIBILITY)
@@ -87,19 +89,22 @@ a:focus {
 }
 
 /* feedback to user: knows from nav bar that the non-underlined item =currently visited page */
-.navigation-list__item--active {
+/* .navigation-list__item--active {
   text-decoration: none;
-}
+} */
 
 /* btn styling */
-button {
+button,
+.button {
   /* styles btn background colour */
-  background-color: #ff6e00;
+  background-color: #ff5e00;
   /* styles font colour */
   color: #fff;
   font-size: 20px;
   /* adds spacing to the btn */
   padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
   border: none;
   border-radius: 10px;
   /* display: inline-block; */
@@ -113,35 +118,11 @@ button {
   /* transition-duration: 0.2s;
   transition-property: opacity; */
 }
-
-.button {
-  background-color: #ff5e00;
-  color: #fff;
-  font-size: 20px;
-  padding: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 10px;
-
-  /* shorthand: transition btw default and hover/focus states */
-  -webkit-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-
-  /* longhand */
-
-  /* transition-duration: 0.2s;
-  transition-property: opacity; */
-}
-
-/* mouse appear as a hand when hovering over btn
-   reduces opacity of the btn to 80% */
 button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-  cursor: pointer;
+  cursor: pointer; /* mouse appears as a hand when hovering */
   color: blue;
   background-color: #00ffdd;
 }
@@ -183,7 +164,8 @@ button__secondary:focus,
   box-sizing: border-box;
 }
 
-/* header (logo+nab bar) covers full width of page */
+/***************** HEADER (logo + nab bar = page full width *********************************************/
+/* Flexbox: designs 1-dimensional layout, all content elements arranged in single row */
 .page-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -191,23 +173,23 @@ button__secondary:focus,
   width: 100%;
   padding: 20px;
   position: fixed; /* Fixes the header at the top */
-  background-color: #e0fffc;
+  background-color: #fff;
   top: 0; /* Position at the top */
   left: 0;
-  z-index: 1000;  /* Ensure it stays on top of other elements */
+  z-index: 1000; /* Ensure it stays on top of other elements */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visibility */
 }
 
-/* no growing, ability to shrink, base width 200px */
+/* no growing, ability to shrink, base width 70px */
 .page-header__item {
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 200px;
-  flex: 0 1 200px;
+  -ms-flex: 0 1 70px;
+  flex: 0 1 70px; /* referes to: flex-grow, flex-shrink, flex-basis */
 }
 
 .logo {
-  width: 200px;
   height: 70px;
+  margin-left: 20px;
 }
 
 /* nav bar: rest of width space, right aligned */
@@ -239,7 +221,7 @@ button__secondary:focus,
 .menu-icon .bar {
   width: 25px;
   height: 3px;
-  background-color: #ff6d54;
+  background-color: #ff5e00;
   margin: 4px 0;
   transition: 0.4s;
 }
@@ -266,8 +248,8 @@ button__secondary:focus,
   }
 
   .navigation-list li {
-    /* display: block; */
-    /* margin: 10px 0; */
+    display: block;
+    margin: 10px 0;
     text-align: center;
   }
 
@@ -278,7 +260,7 @@ button__secondary:focus,
 
 /************************** Animation nav bar ******/
 div.container a {
-  color: #ff6d54;
+  color: #ff5e00;
   text-decoration: none;
   margin: 0 10px;
   padding: 10px;
@@ -351,85 +333,55 @@ div.circleBehind a:hover:after {
 /***************************************************************************** HOME SECTION ***********************************************/
 #home-page {
   /* margin: 0 auto; */
-  padding-top: 200px;
+  padding-top: 180px;
 }
 
-/* places the img on the left of the page with text on its right side */
+.hero-container {
+  display: flex; /* Use flexbox */
+  flex-wrap: wrap; /* Wrap elements to multiple lines on smaller screens */
+  /* margin: 0px auto;
+  max-width: 1536px;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem; */
+}
+
+.profile-item {
+  flex: 1 1 50%; /* Each item takes up 50% of available space */
+  padding: 10px;
+  text-align: center;
+}
+
+/* places img on page's left w/ text on its right side */
 .profile__portrait {
-  float: left;
-  width: 250px;
+  /* float: right;
   margin-right: 10%;
-  margin-bottom: 10%;
-  border-radius: 50%;
+  margin-bottom: 10%; */
+  border-radius: 50%; 
+  width: 277px;
 }
 
-#about-picture {
-  width: 50%;
-}
-
+  /* .profile-item-left {
+     text-align: center;
+  }
 .profile-item-right {
   display: inline-block;
-}
+} */
 
 .greeting-msg {
-  font-size: 1.2em;
-  line-height: 1.5em;
-  margin-top: 0;
+  margin: 0 auto;
   text-align: left;
 }
 
-@media (min-width: 786px) {
-  .greeting-msg {
-    font-size: 1.2em;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 909px) {
-  .greeting-msg {
-    font-size: 1.30em;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 980px) {
-  .greeting-msg {
-    font-size: 1.5em;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 1077px) {
-  .greeting-msg {
-    font-size: 1.75em;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 1225px) {
-  .greeting-msg {
-    font-size: 2em;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 1280px) {
-  .greeting-msg {
-    font-size: 2.3em;
-    line-height: 1.5em;
-  }
-}
-
-.buttons-home {
+#buttons-home {
   /* Ensure vertical alignment of elements in button */
-  display: inline-flex;
-  align-items: center;
-  padding: auto 50%;
+  display: block;
+  text-align: left;
 }
 
 .button img,
 .button span {
-  vertical-align: middle;   /* Ensure vertical alignment */
+  vertical-align: middle;
+  /* Ensure vertical alignment */
 }
 
 #download-CV {
@@ -437,17 +389,19 @@ div.circleBehind a:hover:after {
   width: auto;
   margin-left: 4px;
   text-align: center;
-  filter: invert(100%) sepia(5%) saturate(0%) hue-rotate(74deg) brightness(112%) contrast(101%);   /* poperties for svg color: white */
+  filter: invert(100%) sepia(5%) saturate(0%) hue-rotate(74deg) brightness(112%) contrast(101%); /* poperties for svg color: white */
 }
 
-.home-msg {
-  padding-top: 100px;
-}
+/* .home-msg { */
+  /* padding-top: 100px; */
+  /* clear: right;  */
+  /* prevents txt to wrap img, pushes txt down */
+/* } */
 
 /************************* SKILLS BAR ****************/
 .skills-bar {
   padding-bottom: 5%;
-  padding-top: 5%;
+  padding-top: 8%;
   text-align: center;
   width: 100%;
 }
@@ -464,15 +418,6 @@ div.circleBehind a:hover:after {
 } */
 
 #tools-cards {
-  /* width: auto;
-  display: grid;
-  grid-gap: var(--spacing_s);
-  --auto-grid-min-size: 300px;
-  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-  justify-items: center; */
-  /* grid-auto-rows: 1fr; /* this makes all boxes equal height, */
-  /* grid-auto-flow: row; */
-
   display: -webkit-box;
 
   display: -ms-flexbox;
@@ -538,16 +483,26 @@ div.circleBehind a:hover:after {
 
 /**************************************************************** WORK SECTION  **************************************************/
 #work-page {
-  padding-top: 125px;
+  padding-top: 200px;
 }
 
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;   /* Optional: Adds space between the flex items */
+/* start grid fallback */
+.grid__item {
+ display: inline-block;
+ width: 50%;
+}
+/* end grid fallback */
+
+/* CSS Grid: designs 2-dimensional layouts w/ rows & columns */
+@supports (display: grid) {
+.grid__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin: 20px;
 }
 
-.flex-item {
+.grid__item {
   background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 20px;
@@ -556,14 +511,20 @@ div.circleBehind a:hover:after {
   text-align: center;
   padding-bottom: 20px;
   margin: 20px;
-  font-size: 20px;
-  flex: 1 1 calc(50% - 60px);   /* Adjusts the width to 2 columns with gaps */
-  /* min-width: 415px; */
-  /* max-width: 45%;
-  min-width: 300px; */
-  box-sizing: border-box;
-  /* Ensures padding and border are included in the width calculation */
+  font-size: 18px;
+
+   width: auto;
+   min-height: auto;
 }
+
+  /* Media query to form one column when the minimum width is reached */
+@media (max-width: calc(333px * 2 + 100px)) {
+    .grid__container {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
 
 .tech-cards-container {
   padding: 2% 5%;
@@ -587,6 +548,7 @@ div.circleBehind a:hover:after {
   padding: 10px;
   margin: 0 5px; /* Adds space between the links */
 }
+
 .project-links:hover {
   color: blue;
 }
@@ -604,7 +566,7 @@ div.circleBehind a:hover:after {
 
 .case-study__screenshot {
   height: calc(100vh - 101.6px); /* Subtract the height of the navbar */
-  width: 100%; /* Maintain aspect ratio */
+  width: 100vw;
   max-width: 100%; /* Prevents the image from being wider than the container */
 }
 
@@ -716,9 +678,12 @@ div.circleBehind a:hover:after {
   text-align: justify;
   margin: 20px;
   font-size: 20px;
-  flex: 1 1 calc(50% - 50px); /* Adjusts the width to 2 columns with gaps */
-  box-sizing: border-box;
-  /* Ensures padding and border are included in the width calculation */
+  flex: 1 1 calc(50% - 50px); /* flex-grow, flex-shrink, flex-basis (Adjusts the width to 2 columns with gaps) */
+  box-sizing: border-box; /* Ensures padding and border are included in the width calculation */
+}
+
+.contact-info {
+  padding: 20px 0;
 }
 
 #User-name,
@@ -726,7 +691,7 @@ div.circleBehind a:hover:after {
 #User-msg {
   width: 100%;
   border-style: none;
-  background-color: #47ffea2b;
+  background-color: #17cbb336;
   padding: 0.5rem;
   margin: 15px auto 30px;
 }
@@ -741,18 +706,18 @@ div.circleBehind a:hover:after {
 }
 
 /********************************************************************************************* FOOTER *********************************/
-/* prevents footer to be affeted by floated image, remains below instead of next to it */
+/* Flexbox: designs 1-dimensional layout, all content elements arranged in single row  */
 .page-footer {
-  clear: both;
+  clear: both; /* prevents footer affected by floated image: stays below, not next to it */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
+  flex-direction: column; /* controls flow direction: top-to-bottom */
   text-align: center;
-  background-color: #e0fffc;
+  background-color: #12d2b936;
 }
 
 #medium-logo {
@@ -760,6 +725,265 @@ div.circleBehind a:hover:after {
   height: 30px;
 }
 
+.social-media a {
+  text-decoration: none; 
+}
+
 .impressum {
   font-size: 14px;
+}
+
+/****************** WEBKITS  ******************8*/
+/* @media (min-width: 1400px) {
+} */
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+   #buttons-home {
+    text-align: left;
+  };
+  .profile-item {
+    text-align: center;
+  };
+  .greeting-msg {
+    font-size: 2em;
+    line-height: 1.2em;
+  };
+}
+
+
+@media (min-width: 992px) and (max-width: 1200px) {
+   #buttons-home {
+    text-align: left;
+  };
+  .profile-item {
+    text-align: center;
+  };
+  .greeting-msg {
+    font-size: 1.8em;
+    line-height: 1.5em;
+  };
+}
+
+@media (min-width: 786px) and (max-width: 992px) {
+   #buttons-home {
+    text-align: left;
+  };
+  .profile-item {
+    text-align: center;
+  };
+  .greeting-msg {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  };
+}
+
+/* @media (max-width: 768px) { 
+  .profile-item {
+    flex: 1 1 100%;  */
+    /* Each item takes up 100% of available space on smaller screens */
+  /* }
+} */
+
+@media (min-width: 480px) and (max-width: 786px) {
+  /* .greeting-msg {
+    font-size: 1.5em;
+  }; */
+
+  *, a {
+    font-size: 18px;
+    line-height: 1.5em;
+  };
+  #home-page, #about-page, #contact-page {
+      padding-top: 125px;
+  };
+  .hero-container {
+    display: block;
+  };
+  .greeting-msg {
+    font-size: 2em;
+    text-align: center;
+    line-height: 1.5em;
+  };
+  span {
+    font-size: 1em;
+  };
+   #buttons-home {
+    text-align: center;
+  };
+  .home-msg {
+    padding: 30px 20px 0;
+  };
+  .skills-bar img {
+    height: 33px;
+  };
+  #tools-cards {
+    margin: 0 20px;
+  };
+  .text-layout {
+    margin: 0 20px;
+    max-width: 100%;
+  };
+  .grid__container {
+    margin: 0;
+  };
+  .grid__item {
+      padding-bottom: 5px;
+  };
+  .contact-grid-item {
+    margin: 0;
+    flex: 1 1 calc(100% - 50px);
+  };
+  h3 {
+    margin: 10px;
+  };
+}
+
+@media (min-width: 340px) and (max-width: 480px) {
+  *, a {
+    font-size: 16px;
+    line-height: 1.2em;
+  };
+  #home-page, #about-page, #contact-page {
+      padding-top: 125px;
+  };
+  .greeting-msg {
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 1.2em;
+  };
+  span {
+    font-size: 1em;
+  };
+   #buttons-home {
+    text-align: center;
+     margin: 20px;
+  };
+  .home-msg {
+    padding: 30px 20px 0;
+  };
+  .skills-bar img {
+    height: 33px;
+  };
+  #tools-cards {
+    margin: 0 20px;
+  };
+  .text-layout {
+    margin: 0 20px;
+    max-width: 100%;
+  };
+  .grid__container {
+    margin: 0;
+  };
+  .grid__item {
+      padding-bottom: 5px;
+  };
+  .contact-grid-item {
+    margin: 0;
+    flex: 1 1 calc(100% - 50px);
+  };
+  h3 {
+    margin: 10px;
+  };
+}
+
+@media (min-width: 320px) and (max-width: 340px) {
+  *, a {
+    font-size: 16px;
+    line-height: 1.2em;
+  };
+  #home-page, #about-page, #contact-page {
+      padding-top: 125px;
+  };
+  .greeting-msg {
+    font-size: 1.4em;
+    text-align: center;
+  };
+  span {
+    font-size: 1em;
+  };
+   #buttons-home {
+    text-align: center;
+     margin: 20px;
+  };
+  .button {
+    font-size: 18px;
+    padding: 5px;
+  };
+  .home-msg {
+    padding: 30px 20px 0;
+  };
+  .skills-bar img {
+    height: 33px;
+  };
+  #tools-cards {
+    margin: 0 20px;
+  };
+  .text-layout {
+    margin: 0 20px;
+    max-width: 100%;
+  };
+  .grid__container {
+    margin: 0;
+  };
+  .grid__item {
+      padding-bottom: 5px;
+  };
+  .contact-grid-item {
+    margin: 0;
+    flex: 1 1 calc(100% - 50px);
+  };
+  h3 {
+    margin: 10px;
+  };
+}
+
+
+@media (max-width: 320px) {
+  *, a {
+    font-size: 16px;
+    line-height: 1.2em;
+  };
+  #home-page, #about-page, #contact-page {
+      padding-top: 125px;
+  };
+  .greeting-msg {
+    font-size: 1.2em;
+    text-align: center;
+  };
+  span {
+    font-size: 1em;
+  };
+   #buttons-home {
+    text-align: center;
+  };
+  .button {
+    font-size: 18px;
+    padding: 5px;
+  };
+  .home-msg {
+    padding: 30px 20px 0;
+  };
+  .skills-bar img {
+    height: 33px;
+  };
+  #tools-cards {
+    margin: 0 20px;
+  };
+  .text-layout {
+    margin: 0 20px;
+    max-width: 100%;
+  };
+  .grid__container {
+    margin: 0;
+  };
+  .grid__item {
+      padding-bottom: 5px;
+  };
+  .contact-grid-item {
+    margin: 0;
+    flex: 1 1 calc(100% - 50px);
+};
+  h3 {
+    margin: 10px;
+  };
 }

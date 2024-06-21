@@ -50,32 +50,34 @@
 
   <!--------------------------------------------- HOME --------------------------------------------------------------------------------------------------------------------------------------------->
   <!-- <div class="content-alignment"> -->
-    
+
     <section id="home-page">
-      <div class="text-layout">
+      <div class="hero-container">
         <!-- Item left -->
-        <div class="profile-item-left">
+        <div class="profile-item">
           <img class="profile__portrait" src="./img/profile-picture-L.Lincker.png" alt="profile picture Laure Lincker">
           </div>
         <!-- Item right -->
-         <div class="profile-item-right">
+         <div class="profile-item">
           <h1 class="greeting-msg">
             Hi, <br>
-            I'm <span style="color: #00ffdd">Laure Lincker</span> aka Loulou,
+            I'm <span style="color: #00ffdd">Laure</span> aka Loulou,
             <br>
             <span style="color: #00ffdd">Full-Stack Web Developer</span>
             <br>
             & former <span style="color: #00ffdd">Cultural Mediator</span>.
           </h1> 
-           <div class="buttons-home">
+           <br>
+           <div id="buttons-home">
          <a href="img/Laure_Lincker_Resume.pdf" class="button" download>
-          CV<img id="download-CV" src="./img/dowload-file_logo.svg" alt="dowload"/>
-         </a>
+          CV<img id="download-CV" src="./img/dowload-file_logo.svg" alt="dowload"/></a>
           <a href="index.html#work-page" class="button button__secondary">My Projects</a>
        </div>
         </div>
+        </div>
+      <br>
    <!------------------------------------------ HOME MSG ------------------------------------------------------------------------------------------------------------------------------------------->   
-   <p class="home-msg">
+      <p class="home-msg text-layout">
     Having worked with up to 400 visitors daily, developing extensive interviewing skills and helping visitor
     experience
     improvement,
@@ -87,7 +89,6 @@
     testing, debugging and
     deploying APIs with the MERN stack.
   </p> 
-</div>
 <!------------------------------------------ SKILLS-BAR ------------------------------------------------------------------------------------------------------------------------------------------->
 <div class="skills-bar">
   <img src="img/javascript-logo.svg" alt="javascript">
@@ -210,13 +211,10 @@
 </section>
 
   <!------------------------------------------- WORK --------------------------------------------------------------------------------------------------------------------------------------------->
-  <br>
-  <br>
   <section id="work-page">
     <h2>Web Development Projects </h2>
-<br>
-<div class="flex-container">
-<div class="flex-item">
+<div class="grid__container">
+<div class="grid__item">
   <h3>Portfolio</h3>
   <img class="project-img" src="./img/Screenshot-Portfolio.png">
   <p class="project-description">
@@ -231,7 +229,7 @@
   </div>
   <a class="project-links" href="https://github.com/LoulouLinck/portfolio-site-careerfoundry">GitHub</a>
 </div>
-<div class="flex-item">
+<div class="grid__item">
   <h3>Pokedex</h3>
   <img class="project-img" src="./img/pokedex-screenshot.png">
   <p class="project-description">
@@ -248,7 +246,7 @@
     <a class="project-links" href=" https://louloulinck.github.io/basic-JS-app/">Pokedex</a>
     <a class="project-links" href="https://github.com/LoulouLinck/basic-JS-app">GitHub</a>
   </div>
-<div class="flex-item">
+<div class="grid__item">
   <h3>Movie API</h3>
   <img class="project-img" src="./img/movie-api-logo.png">
   <p class="project-description">
@@ -269,7 +267,7 @@
   <a class="project-links" href="https://github.com/LoulouLinck/movie_api">GitHub</a>
   <a class="project-links" href="case-study.html">Case Study</a>
 </div>
-<div class="flex-item">
+<div class="grid__item">
   <h3>Cineflix</h3>
   <img class="project-img" src="./img/Screenshot-Cineflix-App.png">
   <p class="project-description">
@@ -287,7 +285,7 @@
   <a class="project-links" href="https://cineflixxx.netlify.app/">Cineflix</a>
   <a class="project-links" href="https://github.com/LoulouLinck/myFlix-client">GitHub</a>
 </div>
-<div class="flex-item">
+<div class="grid__item">
   <h3>Cityvent</h3>
   <img class="project-img" src="./img/Screenshot-Meet-App.png">
   <p class="project-description">
@@ -311,7 +309,7 @@
   <a class="project-links" href="https://louloulinck.github.io/Cityvent/">Cityvent</a>
   <a class="project-links" href="https://github.com/LoulouLinck/Cityvent">GitHub</a>
 </div>
-<div class="flex-item">
+<div class="grid__item">
   <h3>Chatty</h3>
   <img class="project-img" src="./img/chatty-screenshot.png">
   <p class="project-description">
@@ -323,7 +321,7 @@
     <span class="tech-card">Expo</span>
     <span class="tech-card">Gifted Chat</span>
     <span class="tech-card">Google Firestore DB</span>
-    <span class="tech-card">Google Firebase Authentification</span>
+    <span class="tech-card">Google Firebase Auth.</span>
     <span class="tech-card">AsyncStorage caching</span>
     <span class="tech-card">Firebase Cloud Storage</span>
     <span class="tech-card">Expo Image Picker</span>
@@ -351,7 +349,7 @@
           <!--action="URL where form's data is sent and stored"; 
             method="get or post: HHTP method used to send data" 
             id="since this contact form will be the only one: distinguish it from other types of form with an ID attribute."-->
-  
+
           <label for="User-name" class="standard-label">Your name</label><br>
           <!-- label: gives title to form elements. Helps screen readers to click in text boxes, toggle small buttons or tick boxes. Reads aloud label as description. Here text box named "Your Name"-->
           <!-- for="should be equal to the id attribute of input element to bind them together"-->
@@ -359,27 +357,26 @@
           <input type="text" id="User-name" name="userName"><br>
           <!-- type="text, email, number, date, time, other semantics"-->
           <!--name= A MUST "values entered in input field won't be sent w/out defining one" -->
-  
+
           <label for="User-email" class="standard-label">Your email*</label><br>
           <input type="email" id="User-email" name="userEmail" required><br>
           <!-- type="email: HTML5 form validation"-->
-  
+
           <label for="User-msg" class="standard-label">Your message*</label><br>
           <textarea id="User-msg" name="userMsg" maxlength="240" required></textarea><br><br>
           <!-- textarea: bigger text box
               maxlength="set character limit" -->
           <!-- required attribute: no submition by user without value input. When not included, input is option for submition validation. Place this attribute at the end. -->
-          
+
           <button type="submit">Submit</button>
           <!-- type="submit": submits values using action and method predefined in <form> tag
       type="reset": delete ALL user inputs. Bad practice.
       works with JS for custom buttons  -->
         </form>
-  
+
           <!-------------------------------------- CONTACT INFO --------------------------------------------------->
         <div class="contact-grid-item contact-info">
             <!-- Telephone: <a href="tel:+49_1525_811698" target="_blank">+49 1525 811698</a><br> -->
-            <br>
           Skype: <a href="skype:live:laure.lincker" target="_blank">live:laure.lincker</a>
           <br>
           <br>
@@ -390,7 +387,7 @@
           <br> -->
         </div>
       </div>
-  
+
   </section>
 
   <!-- </div> -->
@@ -416,8 +413,6 @@
       </a>
       <br>
       <a href="impressum.html" class="impressum">Impressum</a>
-      <br>
-      <br>
       <!-- <a href="https://www.flaticon.com/free-icons/medium" title="icons" id="icon-credits">icons created by Enamo Studios -
         Flaticon</a> -->  
       <!-- <a href="#">Back to top</a> -->
