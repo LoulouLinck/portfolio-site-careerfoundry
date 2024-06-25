@@ -680,7 +680,6 @@ div.circleBehind a:hover:after {
 .contact-grid-item {
   text-align: justify;
   margin: 20px;
-  font-size: 20px;
   flex: 1 1 calc(100% - 50px); /* flex-grow, flex-shrink, flex-basis (Adjusts the width to 2 columns with gaps) */
   box-sizing: border-box; /* Ensures padding and border are included in the width calculation */
 }
@@ -744,6 +743,7 @@ div.circleBehind a:hover:after {
     padding-top: 8%;
   }
 }
+
 
 @media (min-width: 658px) {
 
@@ -811,7 +811,8 @@ body {
  }
   
 .grid__item {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
+  font-size: 18px;
  }
   
 .contact-grid-item {
