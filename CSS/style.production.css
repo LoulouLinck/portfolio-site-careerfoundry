@@ -833,6 +833,12 @@ h3 {
   }
 }
 
+@media all and (max-width: 1000px) {
+  .case-study__screenshot {
+    height: auto;
+  }
+}
+
 @media (min-width: 786px) and (max-width: 992px) {
 
   .greeting-msg {
