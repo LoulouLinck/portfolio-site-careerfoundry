@@ -78,9 +78,9 @@ a {
 
 /* Pseudo-classes for <a> */
 a:visited {
-  color: #ff2600;
+  color: #a13b00;
   /* changes colour if ever visited before */
-}
+ }
 
 a:active {
   color: #0432ff;
@@ -719,7 +719,7 @@ div.circleBehind a:hover:after {
   -ms-flex-direction: column;
   flex-direction: column; /* controls flow direction: top-to-bottom */
   text-align: center;
-  background-color: #12d2b936;
+  background-color: #17cbb336;
 }
 
 #medium-logo {
