@@ -55,6 +55,7 @@ h2 {
   font-size: 2em;
   font-weight: 700;
   line-height: 1em;
+  margin: 50px auto;
 }
 
 h3 {
@@ -64,8 +65,9 @@ h3 {
   line-height: 1em;
 }
 
-span {
+#home-page span {
   font-size: 1em;
+  font-weight: bolder;
   -webkit-text-stroke: 0.25px #000;
 };
 
@@ -80,6 +82,7 @@ a {
 /* Pseudo-classes for <a> */
 a:visited {
   color: #a13b00;
+  text-decoration: none;
   /* changes colour if ever visited before */
  }
 
@@ -481,9 +484,59 @@ div.circleBehind a:hover:after {
 /*********************************************************************** ABOUT SECTION  **************************************************/
 
 #about-page {
-  padding-top: 200px;
+  /* padding-top: 200px; */
+  padding: 200px 20px 0;
+  text-align: justify;
 }
 
+/* .text-layout-70 {
+  width: 70%;
+} */
+
+.about-container {
+  display: flex; /* Use flexbox */
+  flex-wrap: wrap; /* Wrap elements to multiple lines on smaller screens */
+  margin: 0px auto;
+  padding: 3%;
+  max-width: 1400px;
+  /* min-width: 900px; */
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #0000002b; /* Optional, for visualization */
+}
+
+.about-item {
+  flex: 1 1 calc(15% - 60px); /* Each item takes up 50% of available space */
+  padding: 10px;
+  text-align: center;
+}
+
+#about-page img {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.09), 0 10px 9px -4px rgba(0, 0, 0, 0.57);
+  border-radius: 3%;
+}
+
+#achievement-img,
+#beyond-work-img {
+width: 277px;
+}
+
+#goals-img,
+#transition-img {
+  width: 400px;
+  height: 250px;
+  margin: 0 auto;
+  }
+
+.about-item-text {
+  flex: 1 1 calc(60% - 60px); /* Each item takes up 50% of available space */
+  padding: 0 60px;
+  text-align: justify;
+}
+
+#about-page span {
+  font-weight: bolder;
+}
 /**************************************************************** WORK SECTION  **************************************************/
 #work-page {
   padding-top: 125px;
@@ -752,19 +805,19 @@ body {
   font-size: 18px;
   line-height: 1.5em;
 }
-  
+
 #home-page, #about-page, #contact-page {
     padding-top: 180px;
 }
-  
+
 #work-page {
   padding-top: 200px;
 }
-  
+
 .profile-item {
   text-align: center;
 }
-  
+
 .greeting-msg {
   font-size: 2em;
   line-height: 1.2em;
@@ -775,21 +828,21 @@ body {
    text-align: left;
    margin: 0 auto;
 }
-  
+
 .button {
   font-size: 20px;
   padding: 10px;
 }
-  
+
 .home-msg {
   padding: 0 auto;
 }
-  
+
 .skills-bar {
     padding-bottom: 5%;
     padding-top: 8%;
  }
-  
+
 .skills-bar img {
   height: 50px;
  } 
@@ -797,31 +850,31 @@ body {
 #tools-cards {
   margin: 0 20px;
  }
-  
+
 .tools-cards_col {
   max-width: 300px;
  }
-  
+
 .text-layout {
   margin: 0 auto;
   max-width: 71.3%;
  }
-  
+
 .grid__container {
   margin: 20px;
  }
-  
+
 .grid__item {
   padding-bottom: 20px;
   font-size: 18px;
  }
-  
+
 .contact-grid-item {
   margin: 20px;
   flex: 1 1 calc(50% - 50px);
   min-width: 274px;
  }
-  
+
 h3 {
   margin: 0px auto;
  } 
@@ -838,6 +891,45 @@ h3 {
 @media all and (max-width: 1000px) {
   .case-study__screenshot {
     height: auto;
+  }
+
+  .goals-container {
+    flex-direction: row; /* Default row direction for larger screens */
+  }
+
+  .goals-container .about-item {
+    order: 2; 
+    /* Place the image after the text */
+    /* flex: 1 1 50%;  */
+    /* Image takes 50% of the width */
+  }
+
+  .goals-container .about-item-text {
+    order: 1; 
+    /* Place the text before the image */
+    /* flex: 1 1 50%;  */
+    /* Text takes 50% of the width */
+  }
+}
+
+@media all and (max-width: 800px) {
+  .achievement-container,
+  .hobbies-container{
+    flex-direction: row; /* Default row direction for larger screens */
+  }
+
+  .achievement-container .about-item, 
+  .hobbies-container .about-item {
+    order: 2; 
+    /* Place the image after the text */
+    flex: 1 1 100%; 
+  }
+
+  .achievement-container .about-item, 
+  .hobbies-container .about-item-text {
+    order: 1; 
+    /* Place the text before the image */
+    flex: 1 1 100%; 
   }
 }
 
