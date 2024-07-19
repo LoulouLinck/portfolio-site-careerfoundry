@@ -523,8 +523,7 @@ width: 277px;
 
 #goals-img,
 #transition-img {
-  width: 400px;
-  height: 250px;
+  width: 277px;
   margin: 0 auto;
   }
 
@@ -790,6 +789,13 @@ width: 277px;
 }
 
 /**************************************** WEBKITS  *******************/
+@media all and (min-width: 438px) {
+  #goals-img,
+  #transition-img {
+    width: 400px;
+    height: 250px;
+    }
+}
 
 @media all and (max-width: 594px) {
   .skills-bar {
@@ -797,7 +803,6 @@ width: 277px;
     padding-top: 8%;
   }
 }
-
 
 @media (min-width: 658px) {
 
