@@ -788,29 +788,6 @@ width: 277px;
   font-size: 14px;
 }
 
-
-/********************************************************************************************* CASE-STUDY PAGE *********************************/
-
-.overview-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  max-width: 76%;
-  margin: 20px auto;
-
-}
-
-.overview-item,
-.purpose-item,
-.objective-item {
-  text-align: justify;
-  margin: 20px;
-  flex: 1 1 calc(100% - 50px); /* flex-grow, flex-shrink, flex-basis (Adjusts the width to 2 columns with gaps) */
-  box-sizing: border-box; /* Ensures padding and border are included in the width calculation */
-}
-
-
-
 /**************************************** WEBKITS  *******************/
 @media all and (min-width: 438px) {
   #goals-img,
