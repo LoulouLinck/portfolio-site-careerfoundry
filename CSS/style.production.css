@@ -106,29 +106,28 @@ a:focus {
 /* btn styling */
 button,
 .button {
-  /* styles btn background colour */
-  background-color: #ff5e00;
-  /* styles font colour */
+  background-color: #ff5c00;
   color: #fff;
   font-size: 18px;
-  /* adds spacing to the btn */
-  padding: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 24px;
   margin-right: 10px;
   margin-bottom: 10px;
   border: none;
   border-radius: 10px;
-
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   /* shorthand: transition btw default and hover/focus states */
-  -webkit-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: background-color 0.3s ease;
 }
 button:hover,
 button:focus,
 .button:hover,
 .button:focus {
   cursor: pointer; /* mouse appears as a hand when hovering */
-  color: blue;
+  color: rgb(255, 255, 255);
   background-color: #00ffdd;
 }
 
@@ -142,8 +141,8 @@ button__secondary:focus,
 .button__secondary:hover,
 .button__secondary:focus {
   cursor: pointer;
-  color: blue;
-  background-color: #ff5e00;
+  color: rgb(255, 255, 255);
+  background-color: #ff5c00;
 }
 
 .text-layout {
@@ -226,7 +225,7 @@ button__secondary:focus,
 .menu-icon .bar {
   width: 25px;
   height: 3px;
-  background-color: #ff5e00;
+  background-color: #ff5c00;
   margin: 4px 0;
   transition: 0.4s;
 }
@@ -265,7 +264,7 @@ button__secondary:focus,
 
 /************************** Animation nav bar ******/
 div.container a {
-  color: #ff5e00;
+  color: #ff5c00;
   text-decoration: none;
   margin: 0 10px;
   padding: 10px;
@@ -377,7 +376,7 @@ div.circleBehind a:hover:after {
   text-align: center;
 }
 
-#buttons-home {
+.buttons-icon {
   /* Ensure vertical alignment of elements in button */
   display: block;
   text-align: center;
@@ -398,15 +397,16 @@ div.circleBehind a:hover:after {
   filter: invert(100%) sepia(5%) saturate(0%) hue-rotate(74deg) brightness(112%) contrast(101%); /* poperties for svg color: white */
 }
 
-.home-msg {
-  padding: 30px 20px 0;
-};
+.home-msg-intro {
+  padding: 60px 20px 0;
+  text-align: justify;
+  font-size: larger;
+}
 
-/* .home-msg { */
-  /* padding-top: 100px; */
-  /* clear: right;  */
-  /* prevents txt to wrap img, pushes txt down */
-/* } */
+.home-msg {
+  padding: 20px 20px 0;
+  text-align: justify;
+};
 
 /************************* SKILLS BAR ****************/
 .skills-bar {
@@ -488,10 +488,6 @@ div.circleBehind a:hover:after {
   padding: 200px 20px 0;
   text-align: justify;
 }
-
-/* .text-layout-70 {
-  width: 70%;
-} */
 
 .about-container {
   display: flex; /* Use flexbox */
@@ -593,6 +589,7 @@ width: 277px;
   width: 100%;
   height: 250px;
   object-fit: cover;
+  border-radius: 20px 20px 0 0;
 }
 
 .project-links {
@@ -746,7 +743,7 @@ width: 277px;
 #User-msg {
   width: 100%;
   border-style: none;
-  background-color: #17cbb336;
+  background-color: #17cbb314;
   padding: 0.5rem;
   margin: 15px auto 30px;
 }
@@ -758,6 +755,14 @@ width: 277px;
 
 .standard-label {
   font-weight: 700;
+}
+
+#call-icon {
+  height: 26px;
+  width: auto;
+  margin-left: 4px;
+  text-align: center;
+  filter: invert(100%) sepia(5%) saturate(0%) hue-rotate(74deg) brightness(112%) contrast(101%); /* poperties for svg color: white */
 }
 
 /********************************************************************************************* FOOTER *********************************/
@@ -772,7 +777,8 @@ width: 277px;
   -ms-flex-direction: column;
   flex-direction: column; /* controls flow direction: top-to-bottom */
   text-align: center;
-  background-color: #17cbb336;
+  background-color: #00ffdd96;
+  /* #17cbb336 */
 }
 
 #medium-logo {
@@ -785,7 +791,7 @@ width: 277px;
 }
 
 .impressum {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /**************************************** WEBKITS  *******************/
@@ -829,7 +835,7 @@ body {
   text-align: left;
 }
 
- #buttons-home {
+ .buttons-icon {
    text-align: left;
    margin: 0 auto;
 }
@@ -974,7 +980,7 @@ h3 {
     margin-top: 30px;
    }
 
-  #buttons-home {
+  .buttons-icon {
     text-align: left;
   }
 

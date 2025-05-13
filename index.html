@@ -68,7 +68,7 @@
             & former <span style="color: #00ffdd">Cultural Mediator</span>.
           </h1> 
            <br>
-           <div id="buttons-home">
+           <div class="buttons-icon">
          <a href="img/Laure_Lincker_Resume.pdf" class="button" download>
           CV<img id="download-CV" src="./img/dowload-file_logo.svg" alt="download"/></a>
           <a href="index.html#work-page" class="button button__secondary">My Projects</a>
@@ -77,11 +77,16 @@
         </div>
       <br>
    <!------------------------------------------ HOME MSG ------------------------------------------------------------------------------------------------------------------------------------------->   
-      <p class="home-msg text-layout">
+   <p class="home-msg-intro text-layout">
+    <span>I combine cultural insight and development skills to create human-centered digital solutions—
+          <br>using AI to speed up my code and make time for my people.</span>
+   </p>   
+   <p class="home-msg text-layout">
+        <br>
         Having worked with up to 400 visitors daily, developing extensive interviewing skills and helping visitor experience improvement, my background informs my design and sector of interest. I now design products with complex users' needs and their best interest in mind. I look forward to designing products solving social, educational and environmental issues. Specialised in JavaScript, I enjoy designing responsive and secure apps from start to finish, including developing, testing, debugging and deploying APIs with the MERN stack. 
   </p> 
       <br>
-      <a href="https://github.com/LoulouLinck">Check out some of my code</a>
+      <a href="https://github.com/LoulouLinck">Check out my code</a>
 <!------------------------------------------ SKILLS-BAR ------------------------------------------------------------------------------------------------------------------------------------------->
 <div class="skills-bar"alt="technologies I have learnt">
   <img src="img/javascript-logo.svg" alt="javascript">
@@ -267,8 +272,8 @@
     <h2>Web Development Projects </h2>
 <div class="grid__container">
 <div class="grid__item">
-  <h3>Portfolio</h3>
   <img class="project-img" src="./img/Screenshot-Portfolio.png" alt="image of Portfolio project">
+  <h3>Portfolio</h3>
   <p class="project-description">
     For the sack of coding practice I chose not to use any modules, libraries, frameworks or build tools. Every
     single line of code in this project is hand-written.
@@ -282,8 +287,8 @@
   <a class="project-links" href="https://github.com/LoulouLinck/portfolio-site-careerfoundry">GitHub</a>
 </div>
 <div class="grid__item">
-  <h3>Pokedex</h3>
   <img class="project-img" src="./img/pokedex-screenshot.png" alt="image of Pokedex project">
+  <h3>Pokedex</h3>
   <p class="project-description">
     The Pokedex app is a vanilla Javascript application that fetches data from an external Pokemon API and allows
     the user to view and search for Pokemons. Once a Pokemon is selected, a modal will pop up with details about the
@@ -299,8 +304,8 @@
     <a class="project-links" href="https://github.com/LoulouLinck/basic-JS-app">GitHub</a>
   </div>
 <div class="grid__item">
-  <h3>Movie API</h3>
   <img class="project-img" src="./img/movie-api-logo.png" alt="API project illustration">
+  <h3>Movie API</h3>
   <p class="project-description">
     Movie_api is the server-side component of a movies web application. This API will provide users with information
     about different movies, directors, and genres.
@@ -320,8 +325,8 @@
   <a class="project-links" href="case-study.html">Case Study</a>
 </div>
 <div class="grid__item">
-  <h3>Cineflix</h3>
   <img class="project-img" src="./img/Screenshot-Cineflix-App.png" alt="image of Cineflix project">
+  <h3>Cineflix</h3>
   <p class="project-description">
     Cineflix is the client-side app that connects with a movie database: movie_api. Together they form CineFlix, a
     responsive single- page application allowing user to find information about movies and bookmark them in a
@@ -338,10 +343,10 @@
   <a class="project-links" href="https://github.com/LoulouLinck/myFlix-client">GitHub</a>
 </div>
 <div class="grid__item">
-  <h3>Cityvent</h3>
   <img class="project-img" src="./img/Screenshot-Meet-App.png" alt="image of Cityvent project">
+   <h3>Cityvent</h3>
   <p class="project-description">
-    Cityvent a React meet app that will allow users to find events in specified cities and theirs details. The app
+    Cityvent is a React meet app that will allow users to find events in specified cities and theirs details. The app
     was built using React and Javascript, with Unit, Integration, User Acceptance and End-to-End testing. Google
     Calendar API and Authorization was used to verify the user before getting data with serverless toolkit provided
     by AWS Lambda. The app works offline and can be downloaded for desktops or mobile devices.
@@ -362,8 +367,8 @@
   <a class="project-links" href="https://github.com/LoulouLinck/Cityvent">GitHub</a>
 </div>
 <div class="grid__item">
-  <h3>Chatty</h3>
   <img class="project-img" src="./img/chatty-screenshot.png" alt="image of Chatty project">
+  <h3>Chatty</h3>
   <p class="project-description">
     Chatty is a user-friendly mobile chat app built React Native offering a smooth messaging experience together
     with the possiblility to chare images and location.
@@ -388,10 +393,10 @@
    <section id="contact-page">
      <div class="text-layout">
              <h2>Contact me</h2>
-      <p>
-        Looking for opportunities that reflect my versatile interests and profile,
+      <p style="text-align: justify">
+        Looking for opportunities that reflect my versatile interests and profile.<br>
         I hope to collaborate on exciting projects in the Culture, Education and Social sectors with international
-        teams.
+        teams.<br>
         Open for on-site  or hybrid work in Berlin.
       </p>
      </div>
@@ -431,18 +436,33 @@
 
           <!-------------------------------------- CONTACT INFO --------------------------------------------------->
         <div class="contact-grid-item contact-info">
-            <!-- Telephone: <a href="tel:+49_1525_811698" target="_blank">+49 1525 811698</a><br> -->
-          Skype: <a href="skype:live:laure.lincker" target="_blank">live:laure.lincker</a>
-          <br>
-          <br>
-          Mail: <a href="mailto:lincker.laure@gmail.com" target="_blank">lincker.laure@gmail.com</a>
-          <br>
-          <br>
-          <!-- Calendly badge widget begin -->
+          <!-- Calendly link widget begin -->
+           <div class="buttons-icon">
             <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-            <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/lincker-laure?primary_color=00ffdd', text: 'Schedule time with me', color: '#00ffdd', textColor: '#ffffff', branding: true }); }</script>
-          <!-- Calendly badge widget end -->
+          <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+          <a class="button" href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/lincker-laure?primary_color=ff5c00'});return false;"
+            style="
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ff5c00;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+            "
+            onmouseover="this.style.backgroundColor='#00ffdd'" 
+            onmouseout="this.style.backgroundColor='#ff5c00'">
+            Schedule call
+            <img id="call-icon" src="./img/call_logo.png" alt="shedule a call"/>
+          </a>
+           </div>
+          
+          <br>
+          <br>
+          <a href="mailto:lincker.laure@gmail.com" target="_blank">lincker.laure@gmail.com</a>
+<!-- Calendly link widget end -->
           <!-- <br>
           <a href="mailto:lincker.laure@gmail.com" target="_blank">Contact me</a>
           <br> -->
@@ -461,10 +481,10 @@
     </p>
     <div class="social-media">
       <a href="https://fr.linkedin.com/in/laure-lincker" target="_blank">
-        <img id="linkedin-logo" src="./img/linkedin_icon.svg" alt="link to my page linkedin">
+        <img id="medium-logo" src="./img/linkedin_icon.png" alt="link to my page linkedin">
       </a>
       <a href="https://github.com/LoulouLinck" target="_blank">
-        <img id="github-logo" src="./img/github_icon.svg" alt="link to my page github">
+        <img id="medium-logo" src="./img/github_icon.svg" alt="link to my page github">
       </a>
       <!-- <a href="https://www.instagram.com/laure_lincker/?hl=en" target="_blank">
         <img id="instagram-logo" src="./img/instagram_icon.svg" alt="instagram">
